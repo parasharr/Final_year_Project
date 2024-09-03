@@ -60,7 +60,7 @@ if(isset($_POST["submit"])){
     </section>
 
     <div class="form-box">
-        <h1 id="title">Sign Up</h1>
+        <h1 id="title">Login</h1>
         <form class="" action="" method="post" autocomplete="off">
             <div class="input-group">
                 <div class="input-field" id="namefield">
@@ -71,7 +71,7 @@ if(isset($_POST["submit"])){
                     <i class='bx bxs-lock-alt'></i>
                     <input type="password" name="password" id="password" require value="" placeholder="Password"><br>
                 </div>
-                <p>Already Have an Account?<a href="login.php">Login</a></p> 
+                <p>Don't Have an Account?<a href="register.php">Signup</a></p> 
                 <button class="btn" type="submit" name="submit">Submit</button>
             </div>
     </form>

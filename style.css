@@ -151,8 +151,8 @@ body {
 
 /*home page*/
 #hero{
-    background-image: url("fashion-model-3.jpg");
-    height: 100vh;
+    background-image: url("x-Banner-5.jpeg");
+    height: 125vh;
     width: 100%;
     background-size: coverl;
     padding: 0 80px;
@@ -162,11 +162,25 @@ body {
     justify-content: center;
 }
 
-#hero h4{
+#hero h4 {
     padding-bottom: 15px;
+    font-size: 34px;
+    color: beige;
 }
-#hero h1{
-    color: #088178;
+
+#hero h2{
+    font-size: 60px;
+    line-height: 54px;
+    color: ghostwhite;
+}
+
+#hero h1 {
+    color: bisque;
+    font-size: 55px;
+}
+#hero p{
+    font-size: 20px;
+    color: gainsboro;
 }
 
 #hero button{
@@ -230,11 +244,27 @@ body {
     background-color: #fff2e5;
 }
 
+.title-home{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.title-home h1{
+    font-size: 53px;
+    color: goldenrod;
+    padding-top: 30px;
+}
+.title-home h2{
+    font-size: 35px;
+    color: chocolate;
+    font-weight: 400;
+}
+
 /* first banner */
 #banner-1{
     padding: 10%;
     text-align: center;
-    background-image: url("Img/Banners/banner-1.jpg");
+    background-image: url("x-Banner-3.jpg");
     filter: brightness(85%);
     background-repeat: no-repeat;
     background-position: center;
@@ -247,7 +277,7 @@ body {
  
  #banner-1 .banner-txt .brighter-text h2{
      font-size: 68px;
-     color: #403c3c;
+     color: darkslateblue;
      -webkit-text-stroke: 1.5px #000000;
      text-shadow: -1px -1px 0 #000
                    1px -1px 0 #000
@@ -256,8 +286,8 @@ body {
  }
  #banner-1 .banner-txt .brighter-text h1{
      font-size: 88px;
-     padding-top: 15px;
-     color: #4b4141;
+     padding-top: 35px;
+     color: darkslateblue;
      -webkit-text-stroke: 1.5px #000000;
      text-shadow: -1px -1px 0 #000
                    1px -1px 0 #000
@@ -267,7 +297,7 @@ body {
  #banner-1 .banner-txt .brighter-text h4{
      padding-bottom: 10px;
      font-size: 40px;
-     color: #5b5656;
+     color: darkslateblue;
      -webkit-text-stroke: 1.5px #000000;
      text-shadow: -1px -1px 0 #000
                    1px -1px 0 #000
@@ -279,19 +309,20 @@ body {
  }
  
  
- #banner-1 .btn-bnr{
-     padding: 10px;
-     font-size: 15px;
-     cursor: pointer;
-     font-weight: 900;
-     background-color: black;
-     border-radius: 40px;
-     color: #eae1e1;
-     transition: 0.5s ease;
-     border: 2px solid #E3E6F3;
- }
+ #banner-1 .btn-bnr {
+    padding: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: black;
+    border-radius: 35px;
+    color: #eae1e1;
+    transition: 0.5s ease;
+    border: 3px solid #E3E6F3;
+}
  #banner-1 .btn-bnr:hover{
      background-color: #ffffff;
+     border: 3px solid #000;
      color: #000;
      -webkit-text-stroke: 0px #000;
      text-shadow: -1px -1px 0 #000
@@ -375,6 +406,13 @@ body {
     /* position: absolute; */
     bottom: 20px;
     right: 10px;
+    margin: 0;
+}
+#product1 h2{
+    color: goldenrod;
+}
+#product1 p{
+    color: chocolate;
 }
 
 /* small banner */
@@ -383,7 +421,7 @@ body {
     flex-direction: column;
     justify-items: center;
     align-items: flex-start;
-    background-image:url("b17.jpg");
+    background-image:url("x-Banner-4.jpeg");
     min-width: 655px;
     height: 50vh;
     background-size: cover;
@@ -393,7 +431,7 @@ body {
 }
 
 #sm-banner .banner-box2{
-    background-image: url("b10.jpg");
+    background-image: url("x-Banner-2.jpeg");
 }
 
 #sm-banner{
