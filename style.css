@@ -260,11 +260,23 @@ body {
     font-weight: 400;
 }
 
+.vm{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+.vm a{
+    font-size: 20px;
+    font-weight: 700;
+    color: #045550;
+
+}
+
 /* first banner */
 #banner-1{
     padding: 10%;
     text-align: center;
-    background-image: url("x-Banner-3.jpg");
+    background-image: url("x-Banner-1.jpg");
     filter: brightness(85%);
     background-repeat: no-repeat;
     background-position: center;
@@ -287,7 +299,7 @@ body {
  #banner-1 .banner-txt .brighter-text h1{
      font-size: 88px;
      padding-top: 35px;
-     color: darkslateblue;
+     color: darkolivegreen;
      -webkit-text-stroke: 1.5px #000000;
      text-shadow: -1px -1px 0 #000
                    1px -1px 0 #000
@@ -394,6 +406,7 @@ body {
     font-size: 15px;
     font-weight: 700;
     color: #088178;
+    padding-left: 0;
 }
 #product1 .pro .cart {
     /* width: 40px; */
@@ -441,17 +454,17 @@ body {
 }
 
 #sm-banner h4{
-    color: #000000;
+    color: chocolate;
     font-size: 20px;
     font-weight: 300;
 }
 #sm-banner h2{
-    color: #000000;
+    color: brown;
     font-size: 25px;
     font-weight: 800;
 }
 #sm-banner span{
-    color: #000000;
+    color: azure;
     font-size: 14px;
     font-weight: 500;
     padding-bottom: 15px;
@@ -461,6 +474,133 @@ body {
     background: #088178;
     border: 1px solid #088178;
     cursor: pointer;
+}
+
+#product1 h4{
+    color: #161414;
+    font-weight: 600;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 18px;
+    font-size: 23px;
+}
+
+
+.gallery-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    gap: 30px;
+    scrollbar-color: #7b7575 #f0f0f0;
+    scroll-behavior: smooth;
+    border: 1px solid whitesmoke;
+}
+
+.image-card {
+    flex: 0 0 auto;
+}
+
+.image-card img a{
+    width: 100%;
+    display: block;
+}
+
+.image-card p {
+    text-align: center;
+}
+
+.slider-wrapper{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+.slide-button{
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-top: -30px;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    border: 1px solid;
+    outline: none;
+    top: 50%;
+}
+
+#prev-slide{
+    left: -40px;
+    display: none;
+}
+#next-slide{
+    right: -40px;
+}
+
+
+#product1 .image-card .shoe{
+    width: 400px;
+    height: auto;
+}
+#product1 .image-card .shoe-1{
+    width: 400px;
+    height: auto;
+
+}
+
+.zoom-effect{
+    overflow: hidden;
+}
+
+.zoom-effect img{
+    width: 100%;
+    transition: transform 0.7s ease;
+}
+
+.zoom-effect:hover img{
+    transform: scale(1.1);
+}
+
+#product1 .image-card h3{
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #282c2a;
+}
+#product1 .image-card h2{
+    font-size: 17px;
+    padding-bottom: 0%;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#product1 .image-card h2:hover{
+    color: #44544d;
+}
+#product1 img{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#product1{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.font h4 {
+    padding-top: 30px !important;
+    font-size: 42px !important;
+    text-align: center;
+    color: darkgoldenrod;
+    margin: 0;
+    padding: 0;
 }
 
 /* newsletter section */
@@ -663,6 +803,7 @@ footer .copyright{
 .small-img-col,
 .small-img-grp{
     cursor: pointer;
+    gap: 7px;
 }
 
 #prodetails .single-pro-details{
@@ -677,7 +818,7 @@ footer .copyright{
 #prodetails .single-pro-details h1{
     font-size: 20px;
     padding: 10px 0 5px 0;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 #prodetails .single-pro-details h2{
