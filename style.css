@@ -603,69 +603,6 @@ body {
     padding: 0;
 }
 
-/* newsletter section */
-
-#newsletters{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background-image: url("b14.png");
-    background-repeat: no-repeat;
-    background-position: 20% 30%;
-    background-color: #041e42;
-}
-
-#newsletters h4{
-    font-size: 22px;
-    font-weight: 700;
-    color: #fff;
-    padding-bottom: 10px;
-}
-#newsletters p{
-    font-size: 14px;
-    font-weight: 600;
-    color: #818ea0;
-}
-
-#newsletters p span{
-    color: yellow;
-}
-#newsletters .form{
-    display: flex;
-    width: 40%;
-    padding-top: 10px;
-}
-#newsletters .normal{
-    width: 100px;
-}
-
-#newsletters input{
-    height: 3.125rem;
-    padding: 0 1.25em;
-    font-size: 14px;
-    width: 100%;
-    border: 1px solid white;
-    border-radius: 4px;
-    outline: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    color: white;
-}
-
-#newsletters button{
-   background-color: #088178;
-   color: #fff;
-   white-space: no-wrap;
-   padding: 0;
-   width: 50px;
-   height: 50px;
-   transition: 0.2s ease;
-
-}
-#newsletters button:hover{
-    background: #045550;
-}
 
 /* footer section */
 
@@ -673,6 +610,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #312f2f;
 }
 footer .col{
     display: flex;
@@ -684,16 +622,28 @@ footer .col{
 footer h4{
     font-size: 20px;
     padding-bottom: 10px;
+    color: #fff;
 }
+footer h4::after{
+    content: '';
+    background: red;
+    height: 4px;
+    width: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 
 footer p{
     font-size: 15px;
+    color: #fff;
 }
 
 footer a{
     font-size: 15px;
     text-decoration: none;
-    color: #222;
+    color: #fff;
     margin-bottom: 15px;
 }
 
@@ -724,7 +674,7 @@ footer .follow{
 }
 
 footer .follow i{
-    color: #465b52;
+    color: #fff;
     padding-right: 4px;
 }
 
