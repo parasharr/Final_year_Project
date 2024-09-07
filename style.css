@@ -624,16 +624,11 @@ footer h4{
     padding-bottom: 10px;
     color: #fff;
 }
-footer h4::after{
+.af-effect::after{
     content: '';
     background: red;
-    height: 4px;
-    width: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    
 }
-
 
 footer p{
     font-size: 15px;
@@ -1122,101 +1117,5 @@ button:hover {
     color: #fff;
 }
 
-.form-box{
-    position: relative;
-    width: 100%;
-    height: 85%;
-    background: transparent;
-    max-width: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    backdrop-filter: blur(50px);
-    padding: 50px 60px 70px;
-    text-align: center;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  
-  .form-box h1{
-    font-size: 30px;
-    margin-bottom: 60px;
-    color: rgba(0, 0, 0, 0.738);
-    position: relative;
-  
-  }
-  .form-box h1::after{
-    content: '';
-    width: 30px;
-    height: 4px;
-    border-radius: 3px;
-    background:rgba(0, 0, 0, 0.826);
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .input-field{
-    background: #eaeaea;
-    margin: 15px 0;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    max-height: 65px;
-    transition: max-height 0.5s;
-    overflow: hidden;
-  }
-  input{
-    width: 100%;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    padding: 18px 15px;
-  
-  }
-  
-  .input-field i{
-    margin-left: 15px;
-    color: #999;
-  }
-  
-  form p{
-    text-align: left;
-    font-size: 15px;
-  }
-  
-  form p a{
-    text-decoration: none;
-    color:#000000d3;
-  }
-  
-  form p a:hover{
-    text-decoration: underline;
-  }
-  
-.form-box .btn{
-    margin: 20px;
-    width: 50%;
-    height: 40px;
-    background: #088178;
-    border: 1px solid;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-    transform-origin: left;
-    transition: .5s;
-}
 
-  .btn:hover{
-    background-color: #fff;
-    color :#088178;
-  }
-  
-  .input-group{
-    height: 280px;
-  }
-  
+ 
