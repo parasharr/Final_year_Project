@@ -53,6 +53,7 @@ button.normal{
     border: none;
     outline: none;
     transition: 0.2s;
+    border: 1px solid #088178;
 }
 button.white{
     font-size: 13px;
@@ -1117,5 +1118,36 @@ button:hover {
     color: #fff;
 }
 
+.user-name{
+    display: flex;
+    justify-content: space-between;
+}
+.user-name .name h1{
+    padding-left: 15px;
+    font-size: 30px;
+}
+.user-name .name span{
+    color: #088178;
+}
+.user-name .logout{
+    padding-top: 10px;
+    padding-right: 15px;
+}
+.user-name button{
+    border: 1px solid rgb(201, 40, 40);
+}
+.user-name a{
+    text-decoration: none;
+}
+.user-name button:hover{
+    background-color: rgb(201, 40, 40);
+    color: White;
+    font-weight: 700;
+}
 
- 
+.container label{
+    color: white;
+}
+.container .form-control{
+    border: 1px solid #000;
+}

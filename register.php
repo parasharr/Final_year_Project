@@ -1,9 +1,6 @@
 <?php
 require 'config.php';
 
-if(!empty($_SESSION["id"])){
-    header("Location: user-mng.php");
-}
 if(isset($_POST["submit"])){
     $fullname = $_POST["fullname"];
     $username = $_POST["username"];
@@ -27,6 +24,9 @@ if(isset($_POST["submit"])){
             "<script> alert('Password Doesn't Match');</script>";
         }
     }
+}
+if(!empty($_SESSION["id"])){
+    header("Location: user-mng.php");
 }
 ?>
 <!DOCTYPE html>

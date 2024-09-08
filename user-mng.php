@@ -45,12 +45,20 @@ else{
 
    <div class="user-name">
     <div class="name">
-        <h1>Welcome, <?php echo $row["fullname"]; ?></h1>
+        <h1><span>Welcome,</span> <?php echo $row["fullname"]; ?></h1>
     </div>
     <div class="logout">
-        <button class="out-user"><a href="logout.php">Logout</a></button>
+        <a href="login.php"><button class="out-user normal">Logout</button></a>
     </div>
    </div>
+
+   <section id="user-manage">
+    <div class="links">
+        <h1>Manage Account</h1>
+        <h1>Track Order</h1>
+        <h1></h1>
+    </div>
+   </section>
 
     
 
