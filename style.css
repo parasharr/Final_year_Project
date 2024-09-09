@@ -1145,9 +1145,135 @@ button:hover {
     font-weight: 700;
 }
 
-.container label{
+.container{
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    height: 90vh;
+}
+.heading{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1.5rem 0 2rem;
+    color: #088178;
+}
+.add-form{
+    padding: 2rem;
+}
+.add_product,
+.update_product{
+    max-width: 450px;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 30px;
+    margin: auto;
+    border: 1px solid ;
+}
+.add_product label,
+.update_product label{
+    font-size: 15px;
+    font-weight: 700;
+}
+.add_product .input_fields,
+.update_product .input_fields{
+    padding: 5px;
+    font-size: 15px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.submit_btn,
+.edit_btn,
+.cancel_btn{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    border: 1px solid #088178;
+}
+.submit_btn:hover,
+.edit_btn:hover{
+    background-color: #088178;
+    color: white;
+    font-weight: 600;
+}
+.cancel_btn{
     color: white;
 }
-.container .form-control{
-    border: 1px solid #000;
+.cancel_btn:hover{
+    background-color: white;
+    color: red;
+}
+.cancel_btn{
+    background-color: rgb(215, 36, 36);
+    margin: 20px auto;
+}
+.display_message{
+    background-color: #088178;
+    padding: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-weight: 600;
+}
+.display_message span{
+    font-size: 15px;
+}
+.display_message i:hover{
+    color: rgb(210, 47, 47);
+}
+
+.display_product table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.display_product table thead th{
+    padding: 1.5rem;
+    font-size: 15px;
+    background-color: #129b92;
+    color: white;
+    font-weight: 700;
+    border: 2px solid whitesmoke;
+}
+.display_product table td{
+    border: 2px solid rgb(233, 228, 228);
+}
+.empty_text{
+    background-color: #088178;
+    padding: 2.5rem 2rem;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.delete_product_btn,
+.update_product_btn{
+    text-align: center;
+    color: rgb(208, 38, 38);
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+.update_product_btn{
+    color: white;
+}
+
+.pro-img{
+    width: 15%;
+    margin:0 auto;
 }
