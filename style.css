@@ -1144,6 +1144,28 @@ button:hover {
     color: White;
     font-weight: 700;
 }
+#user-manage{
+    padding-top: 30px;
+}
+#user-manage .links{
+    cursor: pointer;
+}
+#user-manage .links a{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    
+}
+#user-manage .links a:hover{
+    color: #088178;
+}
+#user-manage .links{
+    border: 2px solid whitesmoke;
+}
+#user-manage .links:hover{
+    background-color: #f1f1f1;
+}
 
 .container{
     margin: 0 auto;
@@ -1167,7 +1189,7 @@ button:hover {
     border-radius: 0.5rem;
     padding: 30px;
     margin: auto;
-    border: 1px solid ;
+    border: 1px solid;
 }
 .add_product label,
 .update_product label{
@@ -1270,10 +1292,15 @@ button:hover {
     cursor: pointer;
 }
 .update_product_btn{
-    color: white;
+    color: #045550;
 }
 
 .pro-img{
     width: 15%;
     margin:0 auto;
 }
+.pro-img-1{
+    width: 33%;
+    margin: 25px 127px;
+}
+

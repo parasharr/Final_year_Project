@@ -54,10 +54,14 @@ else{
 
    <section id="user-manage">
     <div class="links">
-        <h1>Manage Account</h1>
-        <h1>Track Order</h1>
-        <h1></h1>
+        <h1><a href="manage.html">Manage Account</a></h1>
     </div>
+    <div class="links">
+        <h1><a href="track.html">Track Order</a></h1>
+    </div>
+        
+        <h1></h1>
+    
    </section>
 
     
