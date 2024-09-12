@@ -11,16 +11,23 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="logo.png" alt="logo" height="30"></a>
+        <a href="home.html"><img src="logo.png" alt="logo" height="30px"></a>
 
         <div>
             <ul id="navbar">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a class="active" href="contact.html">Contact Us</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i></a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+                <?php
+                require 'config.php';
+                    $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
+                    $row_count = mysqli_num_rows($select_product);
+                    
+                ?>
+                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>
@@ -31,71 +38,76 @@
         </div>
     </section>
 
-    <section id="pg-header-2" class="abt">
-        <h2>#let's_talk</h2>
-        <p>LEAVE A MESSAGE, We love to hear from you</p>
+    <section id="pg-header" class="blog">
+        <h2>#readmore</h2>
+        <p>Read all case studies about our products! </p><br>
     </section>
 
-    <section id="contact-details" class="section-p1">
-        <div class="details">
-            <span>GET IN TOUCH</span>
-            <h2>Visit one of our agency location or contact us today</h2>
-            <h3>Head Office</h3>
-            <div>
-                <li>
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <p>56 Glassford Street Glasgow G1 1UL New York</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>contact@example.com</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-phone"></i>
-                    <p>contact@example.com</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-clock"></i>
-                    <p>Monday to Saturday: 9.00am to 16.00pm</p>
-                </li>
+    <section id="blog">
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="b1 (1).jpg" alt="">
             </div>
+            <div class="blog-details">
+                <h4>The Cotton Zip-Up Hoodie</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <h1>13/01</h1>
         </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.930354725011!2d-1.2578922859700314!3d51.757646427240395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9ef8c485b%3A0xd2ff1883a001afed!2sUniversity%20of%20Oxford!5e0!3m2!1sen!2sin!4v1718993176096!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="b2.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>How to Style a Quiff</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <h1>13/04</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="b3.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Must-Have Skater Girl Items</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <h1>13/09</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="b7.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>Runway-Inspired Trends</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <h1>16/01</h1>
+        </div>
+        <div class="blog-box">
+            <div class="blog-img">
+                <img src="b6.jpg" alt="">
+            </div>
+            <div class="blog-details">
+                <h4>AW20 Menswear Trends</h4>
+                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
+                <a href="#">CONTINUE READING</a>
+            </div>
+            <h1>16/05</h1>
         </div>
     </section>
 
-    <section id="form-details">
-        <form action="">
-            <span>LEAVE A MESSAGE</span>
-            <h2>We love to hear from you</h2>
-            <input type="text" placeholder="your name">
-            <input type="text" placeholder="email">
-            <input type="text" placeholder="subject">
-            <textarea name="" id="" cols="10" placeholder="your message"></textarea>
-            <button class="normal">Submit</button>
-        </form>
-        <div class="people">
-            <div>
-                <img src="1.png" alt="">
-                <p><span>Jhon Doe</span> Senior Marketing Manager <br>
-                Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
-            </div>
-            <div>
-                <img src="2.png" alt="">
-                <p><span>William Smith</span> Senior Marketing Manager <br>
-                Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
-            </div>
-            <div>
-                <img src="3.png" alt="">
-                <p><span>Emma Stone</span> Senior Marketing Manager <br>
-                Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
-            </div>
-        </div>
+
+    <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
     </section>
-
-
-
+    
+    
     <footer class="section-p1">
         <div class="col">
             <img class="logo" src="logo.png" alt="logo" height="25"><br>
@@ -145,7 +157,7 @@
         </div>
         
     </footer>
-
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="script.js"></script>

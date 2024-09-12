@@ -11,16 +11,23 @@
 </head>
 <body>
     <section id="header">
-        <a href="home.html"><img src="logo.png" alt="logo" height="30px"></a>
+        <a href="#"><img src="logo.png" alt="logo" height="30px"></a>
 
         <div>
             <ul id="navbar">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a class="active" href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i></a></li>
+
+                <?php
+                require 'config.php';
+                    $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
+                    $row_count = mysqli_num_rows($select_product);
+                    
+                ?>
+                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>
@@ -31,76 +38,61 @@
         </div>
     </section>
 
-    <section id="pg-header" class="blog">
-        <h2>#readmore</h2>
-        <p>Read all case studies about our products! </p><br>
+    <section id="pg-header-2" class="abt">
+        <h2>#KnowUs</h2>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
     </section>
 
-    <section id="blog">
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="b1 (1).jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h4>The Cotton Zip-Up Hoodie</h4>
-                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
-                <a href="#">CONTINUE READING</a>
-            </div>
-            <h1>13/01</h1>
+    <section id="about-head" class="section-p1">
+        <img src="a6.jpg" alt="">
+        <div>
+            <h2>Who We Are?</h2>
+            <p style="color: #000000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem animi soluta voluptatibus molestias assumenda unde vero earum distinctio nihil. Veniam sint a minima reprehenderit! Dolorum recusandae quisquam facilis doloribus reprehenderit!
+            </p><br>
+
+            <abbr title="">Create stunning images with as much or as little control as you like thanks to a choice of Basic and creative modes.</abbr>
+
+            <br><br>
+
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Create stunning images with as much or as little control as you like thanks to a choice of Basic and creative modes</marquee>
         </div>
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="b2.jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h4>How to Style a Quiff</h4>
-                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
-                <a href="#">CONTINUE READING</a>
-            </div>
-            <h1>13/04</h1>
+    </section>
+   
+    <section id="about-app" class="section-p1">
+        <h1>Download Our <a href="#">App</a></h1>
+        <div class="video">
+            <video autoplay loop="-1" muted  src="1.mp4"></video>
         </div>
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="b3.jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h4>Must-Have Skater Girl Items</h4>
-                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
-                <a href="#">CONTINUE READING</a>
-            </div>
-            <h1>13/09</h1>
+    </section>
+
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="f1.png">
+            <h6>Free Shipping</h6>
         </div>
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="b7.jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h4>Runway-Inspired Trends</h4>
-                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
-                <a href="#">CONTINUE READING</a>
-            </div>
-            <h1>16/01</h1>
+        <div class="fe-box">
+            <img src="f2.png">
+            <h6>Order Online</h6>
         </div>
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="b6.jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h4>AW20 Menswear Trends</h4>
-                <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
-                <a href="#">CONTINUE READING</a>
-            </div>
-            <h1>16/05</h1>
+        <div class="fe-box">
+            <img src="f3.png">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="f4.png">
+            <h6>Promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="f5.png">
+            <h6>Happy Sell</h6>
+        </div>
+        <div class="fe-box">
+            <img src="f6.png">
+            <h6>24x7 Support</h6>
         </div>
     </section>
 
 
-    <section id="pagination" class="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
-    </section>
-    
-    
     <footer class="section-p1">
         <div class="col">
             <img class="logo" src="logo.png" alt="logo" height="25"><br>

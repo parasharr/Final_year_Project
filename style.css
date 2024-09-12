@@ -1302,9 +1302,12 @@ button:hover {
     margin: 25px 127px;
 }
 
-.pro-container{
+.pro-container-1{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     gap: 80px;
     flex-wrap: wrap;
+}
+.pro-container{
+    display: flex;
 }

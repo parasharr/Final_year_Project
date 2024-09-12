@@ -20,7 +20,13 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup>4</sup></span></a></li>
+                <?php
+                require 'config.php';
+                    $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
+                    $row_count = mysqli_num_rows($select_product);
+                    
+                ?>
+                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>

@@ -7,9 +7,16 @@ if(isset($_POST['add_to_cart'])){
     $products_image=$_POST['products_image'];
     $product_quantity=1;
 
-// insert cart data in cart table
+    //select cart data based on condition
+    $select_cart = mysqli_query($conn,"Select * from `cart` where name='$products_name'");
+    if(mysqli_num_rows($select_cart)>0){
+        echo "<script> alert('This product is already added to cart') </script>";
+    }else{
+        // insert cart data in cart table
     $insert_products=mysqli_query($conn, "insert into `cart` (name, price, image, quantity) values
     ('$products_name', '$products_price', '$products_image', $product_quantity)");
+    echo " <script>alert('Product is added to the cart'); </script>";
+    }
 }
 ?>
 
@@ -35,7 +42,13 @@ if(isset($_POST['add_to_cart'])){
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i></a></li>
+
+                <?php
+                    $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
+                    $row_count = mysqli_num_rows($select_product);
+                    
+                ?>
+                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>
@@ -54,7 +67,7 @@ if(isset($_POST['add_to_cart'])){
 
 
     <section id="product1" class="section-p1">
-        <div class="pro-container">
+        <div class="pro-container-1">
             <?php
 $select_products = mysqli_query($conn, "Select * from `products`");
 
@@ -74,9 +87,9 @@ if(mysqli_num_rows($select_products)>0){
                             <i class='bx bxs-star' style='color:#b3b318' ></i>
                         </div>
                         <h4><?php echo $fetch_product['price']; ?></h4>
-                        <input type="hidden" name="products_name">
-                        <input type="hidden" name="products_price">
-                        <input type="hidden" name="products_image">
+                        <input type="hidden" name="products_name" value="<?php echo $fetch_product['name']; ?>">
+                        <input type="hidden" name="products_price" value="<?php echo $fetch_product['price']; ?>">
+                        <input type="hidden" name="products_image" value="<?php echo $fetch_product['image']; ?>">
                     </div>
                     <div>
                         <input type="submit" name="add_to_cart" class="submit_btn normal" value="Add to Cart">
