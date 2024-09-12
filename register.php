@@ -1,5 +1,10 @@
 <?php
+session_start();
 require 'config.php';
+
+if(!empty($_SESSION['id'])){
+    header('location: register.php');
+}
 
 if(isset($_POST["submit"])){
     $fullname = $_POST["fullname"];
@@ -18,6 +23,8 @@ if(isset($_POST["submit"])){
             mysqli_query($conn,$query);
             echo
             "<script> alert('SignUp successful!')</script>";
+            
+            
         }
         else{
             echo
@@ -25,9 +32,7 @@ if(isset($_POST["submit"])){
         }
     }
 }
-if(!empty($_SESSION["id"])){
-    header("Location: user-mng.php");
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
