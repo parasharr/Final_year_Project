@@ -20,26 +20,27 @@ if(!empty($_SESSION["id"])){
     <link rel="stylesheet" href="https://fontawesome.com/releases/v6.04.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <section id="header">
-        <a href="home.html"><img src="logo.png" alt="logo" height="30px"></a>
+        <a href="home.php"><img src="logo.png" alt="logo" height="30px"></a>
 
         <div>
             <ul id="navbar">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
 
                 <?php
                     $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
                     $row_count = mysqli_num_rows($select_product);
                     
                 ?>
-                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup>4</sup></span></a></li>
-                <li class="user"><a class="active" href="#"><i class="fa-solid fa-circle-user"></i></a></li>
+                <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup>4</sup></span></a></li>
+                <li class="user"><a class="active" href="user-mng.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>
         </div>

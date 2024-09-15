@@ -8,31 +8,32 @@
     <link rel="stylesheet" href="https://fontawesome.com/releases/v6.04.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <section id="header">
-        <a href="home.html"><img src="logo.png" alt="logo" height="30px"></a>
+        <a href="home.php"><img src="logo.png" alt="logo" height="30px"></a>
 
         <div>
             <ul id="navbar">
-                <li><a class="active" href="home.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a class="active" href="home.php">Home</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
                 <?php
                 require 'config.php';
                     $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
                     $row_count = mysqli_num_rows($select_product);
                     
                 ?>
-                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
+                <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>
         </div>
         <div id="mobile">
-            <a href="cart.html"><i class='bx bx-shopping-bag' style='color:#000000' ></i></a>
+            <a href="cart.php"><i class='bx bx-shopping-bag' style='color:#000000' ></i></a>
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
@@ -50,14 +51,14 @@
         <h2>For all Festive seasons</h2>
     </div>
 
-    <section id="banner-1" class="section-m1" data-aos="fade-up">
+    <section id="banner-1" class="section-m1">
         <div class="banner-txt">
             <div class="brighter-text">
-                <h2 data-aos="fade-up">Upto <span>40%</span> Off</h2>
-                <h1 data-aos="fade-up">On All Products</h1>
-                <h4 data-aos="fade-up">Go Grab Your's</h4>
+                <h2>Upto <span>40%</span> Off</h2>
+                <h1>On All Products</h1>
+                <h4>Go Grab Your's</h4>
             </div>
-            <button class="btn-bnr" data-aos="fade-up">Shop Now</button>
+            <button class="btn-bnr">Shop Now</button>
         </div>
     </section>
 

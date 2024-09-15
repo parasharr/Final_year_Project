@@ -358,9 +358,9 @@ body {
     text-align: center;
 }
 
-#product1 .pro{
+#product1 .product{
     width: 23%;
-    min-width: 250px;
+    min-width: 300px;
     padding: 10px 12px;
     border: 1px solid #cce7d0;
     border-radius: 25px;
@@ -371,40 +371,40 @@ body {
     position: relative;
 }
 
-#product1 .pro:hover{
+#product1 .product:hover{
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.386);
 }
 
-#product1 .pro img{
+#product1 .product img{
     width: 100%;
     border-radius: 20px;
 }
 
-#product1 .pro .description{
+#product1 .product .description{
     text-align: start;
     padding: 10px 0;
 }
-#product1 .pro .description span{
+#product1 .product .description span{
     color: #505a15;
     font-size: 12px;
 }
-#product1 .pro .description h5{
+#product1 .product .description h5{
     padding-top: 7px;
     color: #1a1a1a;
     font-size: 14px;
 }
-#product1 .pro .description i{
+#product1 .product .description i{
     font-size: 15px;
     color: rgba(243,181,25);
 }
-#product1 .pro .description h4{
+#product1 .product .description h4{
     padding-top: 7px;
     font-size: 15px;
     font-weight: 700;
     color: #088178;
     padding-left: 0;
 }
-#product1 .pro .cart {
+#product1 .product .cart {
     /* width: 40px; */
     /* height: 40px; */
     /* line-height: 40px; */
@@ -757,7 +757,7 @@ footer .copyright{
 }
 
 #prodetails .single-pro-details h1{
-    font-size: 20px;
+    font-size: 30px;
     padding: 10px 0 5px 0;
     font-weight: 700;
 }
@@ -771,6 +771,9 @@ footer .copyright{
     font-size: 15px;
     padding: 0 0 10px 0;
     font-weight: 700;
+}
+#prodetails .single-pro-details p{
+    padding-bottom: 20px;
 }
 
 #prodetails .single-pro-details h6{
@@ -1113,6 +1116,16 @@ button:hover {
     color: #fff;
 }
 
+.quantity_box .qty_box{
+    height: 30px;
+    width: 70px;
+}
+.quantity_box input{
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 7px;
+}
+
 .user-name{
     display: flex;
     justify-content: space-between;
@@ -1272,9 +1285,7 @@ button:hover {
     text-align: center;
     color: white;
 }
-.empty_text-1{
 
-}
 .btns{
     display: flex;
     justify-content: center;
@@ -1310,4 +1321,25 @@ button:hover {
 }
 .pro-container{
     display: flex;
+}
+
+.view-d{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: white;
+    background-color: #000;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    border: 1px solid #088178;
+}
+.view-d:hover{
+    background: white;
+    color: #000;
+}
+a{
+    text-decoration: none;
 }

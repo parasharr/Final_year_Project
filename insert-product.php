@@ -4,11 +4,13 @@ require 'config.php';
 if(isset($_POST['add_product'])){
     $p_name = $_POST['p_name'];
     $p_price = $_POST['p_price'];
+    $p_description = $_POST['p_description'];
+    $p_ft = $_POST['p_ft'];
     $p_image = $_FILES['p_image']['name'];
     $p_image_tmp_name = $_FILES['p_image']['tmp_name'];
     $p_image_folder='images/'.$p_image;
 
-    $insert_query = mysqli_query($conn,"insert into `products` (name,price,image) values('$p_name','$p_price','$p_image')") or die("Insert query failed");
+    $insert_query = mysqli_query($conn,"insert into `products` (name,description,key_ft,price,image) values('$p_name','$p_description','$p_ft','$p_price','$p_image')") or die("Insert query failed");
     if($insert_query){
         move_uploaded_file($p_image_tmp_name,$p_image_folder);
         $display_message = "Product inserted successfully";
@@ -57,6 +59,12 @@ if(isset($_POST['add_product'])){
             <form action="" class="add_product" method="post" enctype="multipart/form-data">
                         <label>Product Name</label>
                         <input type="text" name="p_name" placeholder="Enter Product Name" class="input_fields" required><br>
+                        
+                        <label>Product Description</label>
+                        <textarea name="p_description" placeholder="Enter Product Description" class="input_fields" required></textarea>
+                        
+                        <label>Product Key Feature</label>
+                        <textarea type="text" name="p_ft" placeholder="Enter Product Key Feature" class="input_fields" required></textarea>
                     
                         <label>Product Price</label>
                         <input type="number" name="p_price" min="0" placeholder="Enter Product Price" class="input_fields" required><br>
@@ -72,3 +80,8 @@ if(isset($_POST['add_product'])){
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+

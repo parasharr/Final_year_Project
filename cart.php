@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="https://fontawesome.com/releases/v6.04.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <section id="header">
-        <a href="home.html"><img src="logo.png" alt="logo" height="30px"></a>
+        <a href="home.php"><img src="logo.png" alt="logo" height="30px"></a>
 
         <div>
             <ul id="navbar">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
 
                 <?php
                 require 'config.php';
@@ -27,7 +28,7 @@
                     $row_count = mysqli_num_rows($select_product);
                     
                 ?>
-                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
+                <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>
@@ -49,13 +50,24 @@
                 <tr>
                     <th>Remove</th>
                     <th>Product Name</th>
+                    <th>Images</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Subtotal</th>
+                    <th>Total Price</th>
                 </tr>
             </thead>
             <tbody id="cart-items">
-                <!-- Cart items will be inserted here -->
+                <td></td>
+                <td>White Kurti with palazo</td>
+                <td><img src="" alt=""></td>
+                <td>4999</td>
+                <td>
+                    <div class="quantity_box">
+                        <input type="number" min="1" name="">
+                        <input type="submit" class="qty_box" name="">
+                    </div>
+                </td>
+                <td>4999</td>
             </tbody>
         </table>
     </div>
@@ -137,74 +149,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script>
-         document.addEventListener('DOMContentLoaded', () => {
-            const cartItems = document.getElementById('cart-items');
-            const totalAmount = document.getElementById('total-amount');
-            let total = 0;
-
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-            const updateCart = () => {
-                cartItems.innerHTML = '';
-                total = 0;
-
-                cart.forEach((item, index) => {
-                    const row = document.createElement('tr');
-
-                    const removeCell = document.createElement('td');
-                    const removeButton = document.createElement('button');
-                    removeButton.textContent = 'Remove';
-                    removeButton.addEventListener('click', () => {
-                        cart.splice(index, 1);
-                        localStorage.setItem('cart', JSON.stringify(cart));
-                        updateCart();
-                    });
-                    removeCell.appendChild(removeButton);
-                    row.appendChild(removeCell);
-
-                    const nameCell = document.createElement('td');
-                    nameCell.textContent = item.name;
-                    row.appendChild(nameCell);
-
-                    const priceCell = document.createElement('td');
-                    priceCell.textContent = `$${item.price}`;
-                    row.appendChild(priceCell);
-
-                    const quantityCell = document.createElement('td');
-                    const quantityInput = document.createElement('input');
-                    quantityInput.type = 'number';
-                    quantityInput.value = item.quantity;
-                    quantityInput.addEventListener('change', () => {
-                        item.quantity = parseInt(quantityInput.value);
-                        localStorage.setItem('cart', JSON.stringify(cart));
-                        updateCart();
-                    });
-                    quantityCell.appendChild(quantityInput);
-                    row.appendChild(quantityCell);
-
-                    const subtotalCell = document.createElement('td');
-                    subtotalCell.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
-                    row.appendChild(subtotalCell);
-
-                    cartItems.appendChild(row);
-
-                    total += item.price * item.quantity;
-                });
-
-                totalAmount.textContent = total.toFixed(2);
-            };
-
-            function updateSubtotal() {
-  let subtotal = 0;
-  document.querySelectorAll('#cart .total').forEach(totalCell => {
-    subtotal += parseFloat(totalCell.textContent.replace('$', ''));
-  });
-  document.getElementById('cart-subtotal').textContent = subtotal.toFixed(2);
-  document.getElementById('total-amount').textContent = subtotal.toFixed(2);
-}
-
-            updateCart();
-        });
     </script>
 </body>
 </html>

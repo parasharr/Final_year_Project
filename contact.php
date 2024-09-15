@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="https://fontawesome.com/releases/v6.04.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="logo.png" alt="logo" height="30"></a>
+        <a href="home.php"><img src="logo.png" alt="logo" height="30"></a>
 
         <div>
             <ul id="navbar">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a class="active" href="contact.html">Contact Us</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a class="active" href="contact.php">Contact Us</a></li>
 
                 <?php
                 require 'config.php';
@@ -27,13 +28,13 @@
                     $row_count = mysqli_num_rows($select_product);
                     
                 ?>
-                <li id="lg-bag"><a href="cart.html"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
+                <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>
         </div>
         <div id="mobile">
-            <a href="cart.html"><i class='bx bx-shopping-bag' style='color:#000000' ></i></a>
+            <a href="cart.php"><i class='bx bx-shopping-bag' style='color:#000000' ></i></a>
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
