@@ -3,7 +3,7 @@ session_start();
 require 'config.php';
 
 if(!empty($_SESSION['id'])){
-    header('location: register.php');
+    header('location: user-mng.php');
 }
 
 if(isset($_POST["submit"])){

@@ -1321,6 +1321,9 @@ button:hover {
 }
 .pro-container{
     display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
 }
 
 .view-d{

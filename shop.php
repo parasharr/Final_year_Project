@@ -1,6 +1,8 @@
 <?php
 require 'config.php';
 
+
+
 if(isset($_POST['add_to_cart'])){
     $products_name=$_POST['products_name']; 
     $products_price=$_POST['products_price']; 

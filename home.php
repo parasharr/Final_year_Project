@@ -1,3 +1,7 @@
+<?php
+require 'config.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,7 +70,7 @@
         <h2>Featured Product</h2>
         <p>Festive Collection New & Modern Design</p>
         <div class="pro-container">
-            <div class="pro" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.html'">
                 <img src="y-dress-32.jpeg" alt="">
                 <div class="description">
                     <span>R&R</span>
@@ -83,7 +87,7 @@
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
             </div>
-            <div class="pro" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.html'">
                 <img src="y-dress-30.jpeg" alt="">
                 <div class="description">
                     <span>Wedress</span>
@@ -100,7 +104,7 @@
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
             </div>
-            <div class="pro" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.html'">
                 <img src="y-dress-31.jpeg" alt="">
                 <div class="description">
                     <span>Bonsoir</span>
@@ -117,7 +121,7 @@
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
             </div>
-            <div class="pro" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.html'">
                 <img src="y-dress-29.jpeg" alt="">
                 <div class="description">
                     <span>Riyaasat</span>
@@ -134,7 +138,7 @@
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
             </div>
-            <div class="pro" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.html'">
                 <img src="y-dress-14.jpeg" alt="">
                 <div class="description">
                     <span>VJV</span>
@@ -151,7 +155,7 @@
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
             </div>
-            <div class="pro" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.html'">
                 <img src="y-dress-13.jpeg" alt="">
                 <div class="description">
                     <span>Sutikapda</span>
@@ -168,7 +172,7 @@
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
             </div>
-            <div class="pro" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.html'">
                 <img src="y-dress-12.jpeg" alt="">
                 <div class="description">
                     <span>StalktoBuy</span>
@@ -185,7 +189,7 @@
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
             </div>
-            <div class="pro" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.html'">
                 <img src="y-dress-11.jpeg" alt="">
                 <div class="description">
                     <span>Koskii</span>
@@ -206,7 +210,7 @@
     </section>
     
     <div class="vm">
-        <a href="shop.html">View More</a>
+        <a href="shop.php">View More</a>
     </div>
     
     
@@ -230,9 +234,9 @@
         <h4>Featured Sections</h4>
     </div>
 
-    <section id="product1" class="section-p1" data-aos="fade-up">
+    <section id="product1" class="section-p1">
         <div class="pro-container">
-            <div class="slider-wrapper" data-aos="fade-up">
+            <div class="slider-wrapper">
                 <button id="prev-slide" class="slide-button material-symbols-rounded">&#10094;</button>
                 <div class="image-list">
                     <div class="gallery-container">
