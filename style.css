@@ -1042,7 +1042,7 @@ footer .copyright{
 .cart {
     margin: 20px;
     padding: 20px;
-    border: 0.5px solid #d5cbcb94;
+    border: 2px solid #d5cbcb94;
     max-height: 400px;
     overflow-y: auto;
 }
@@ -1053,7 +1053,7 @@ table {
 }
 
 th, td {
-    padding: 10px;
+    padding: 20px;
     border: 0.5px solid #d5cbcb94;
     text-align: left;
 }
@@ -1345,4 +1345,10 @@ button:hover {
 }
 a{
     text-decoration: none;
+}
+.cart-totals a{
+    color: #000;
+}
+.cart-totals a:hover{
+    color: white;
 }

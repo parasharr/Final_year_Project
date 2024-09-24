@@ -1,7 +1,14 @@
 <?php
 require 'config.php';
 
-
+if(isset($_POST['update_cart_qty'])){
+ $update_value=$_POST['update_qty'];
+ $update_id = $_POST['update_qty_id'];
+ $update_qty = mysqli_query($conn,"update `cart` set quantity=$update_value where id=$update_id");
+ if($update_qty){
+    header('location: cart.php');
+}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +40,8 @@ require 'config.php';
                     $row_count = mysqli_num_rows($select_product);
                     
                 ?>
-                <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
+
+                <li id="lg-bag"><a class="active" href="cart.php"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
             </ul>
@@ -51,29 +59,50 @@ require 'config.php';
 
     <div class="cart">
         <table>
-            <thead>
-                <tr>
-                    <th>Remove</th>
-                    <th>Product Name</th>
-                    <th>Images</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total Price</th>
-                </tr>
-            </thead>
-            <tbody id="cart-items">
-                <td></td>
-                <td>White Kurti with palazo</td>
-                <td><img src="" alt=""></td>
-                <td>4999</td>
+            <?php
+$select_cart_products = mysqli_query($conn,"Select * from `cart`");
+if(mysqli_num_rows($select_cart_products) > 0){
+    echo "
+    <thead>
+        <tr>
+            <th>Remove</th>
+            <th>Product Name</th>
+            <th>Images</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    ";
+while($fetch_cart_products = mysqli_fetch_assoc($select_cart_products)){
+    ?>
+ <tbody id="cart-items">
+                <td><a href="">
+                    <i class="fa-solid fa-trash" style="color: #be1313;font-size:20px;"></i>
+                </a></td>
+                <td><?php echo $fetch_cart_products["name"]?></td>
+                <td><img class="pro-img" src="images/<?php echo $fetch_cart_products["image"]?> " alt=""></td>
+                <td>₹<?php echo $fetch_cart_products["price"] ?></td>
                 <td>
-                    <div class="quantity_box">
-                        <input type="number" min="1" name="">
-                        <input type="submit" class="qty_box" name="">
-                    </div>
+                    <form method="post" action="">
+                        <input type="hidden" name="update_qty_id" value="<?php echo $fetch_cart_products["id"] ?>">
+                        <div class="quantity_box">
+                            <input type="number" min="1" name="update_qty" max="10" value="<?php echo $fetch_cart_products["quantity"]?>">
+                            <input type="submit" class="qty_box" name="update_cart_qty" value="Update">
+                        </div>
+                    </form>    
                 </td>
                 <td>4999</td>
             </tbody>
+    <?php
+}
+
+}else{
+    echo "No Products";
+}
+            ?>
+            
+           
         </table>
     </div>
 
@@ -87,18 +116,19 @@ require 'config.php';
                 </tr>
                 <tr>
                     <td><strong>Total</strong></td>
-                    <td><Strong><p>$<span id="total-amount">0</span></p></Strong></td>
+                    <td><Strong><p>₹<span id="total-amount">4999</span></p></Strong></td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>Tex Rate%</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>GST</td>
                     <td></td>
-                </tr>
+                </tr> -->
             </table>
-            <button class="normal">Proceed To Checkout</button>
+            <a href="shop.php"><button class="normal">Continue Shopping</button></a>
+            <a href="check.php"><button class="normal">Proceed To Checkout</button></a>
         </div>
 
     <footer class="section-p1">
