@@ -52,10 +52,10 @@ require 'config.php';
     <section id="blog">
         <div class="blog-box">
             <div class="blog-img">
-                <img src="b1 (1).jpg" alt="">
+                <img src="blog-1.jpg.jpeg" alt="">
             </div>
             <div class="blog-details">
-                <h4>The Cotton Zip-Up Hoodie</h4>
+                <h4>The Silk Cloths</h4>
                 <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <a href="#">CONTINUE READING</a>
             </div>
@@ -63,7 +63,7 @@ require 'config.php';
         </div>
         <div class="blog-box">
             <div class="blog-img">
-                <img src="b2.jpg" alt="">
+                <img src="blog-2.jpg.jpg" alt="">
             </div>
             <div class="blog-details">
                 <h4>How to Style a Quiff</h4>
@@ -74,7 +74,7 @@ require 'config.php';
         </div>
         <div class="blog-box">
             <div class="blog-img">
-                <img src="b3.jpg" alt="">
+                <img src="blog-3.jpg.jpg" alt="">
             </div>
             <div class="blog-details">
                 <h4>Must-Have Skater Girl Items</h4>
@@ -85,7 +85,7 @@ require 'config.php';
         </div>
         <div class="blog-box">
             <div class="blog-img">
-                <img src="b7.jpg" alt="">
+                <img src="blog-4.jpg.jpg" alt="">
             </div>
             <div class="blog-details">
                 <h4>Runway-Inspired Trends</h4>
@@ -96,7 +96,7 @@ require 'config.php';
         </div>
         <div class="blog-box">
             <div class="blog-img">
-                <img src="b6.jpg" alt="">
+                <img src="blog-5.jpg.jpg" alt="">
             </div>
             <div class="blog-details">
                 <h4>AW20 Menswear Trends</h4>
@@ -109,8 +109,8 @@ require 'config.php';
 
 
     <section id="pagination" class="section-p1">
-        <a href="#">1</a>
-        <a href="#">2</a>
+        <a href="blog.php">1</a>
+        <a href="blog2.php">2</a>
     </section>
     
     

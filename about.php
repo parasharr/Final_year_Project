@@ -52,14 +52,14 @@ require 'config.php';
         <img src="a6.jpg" alt="">
         <div>
             <h2>Who We Are?</h2>
-            <p style="color: #000000;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem animi soluta voluptatibus molestias assumenda unde vero earum distinctio nihil. Veniam sint a minima reprehenderit! Dolorum recusandae quisquam facilis doloribus reprehenderit!
+            <p style="color: #000000;">Welcome to <strong>Glam Boutique</strong>, where fashion meets elegance and style knows no bounds. We are an online store dedicated to bring you the latest trends and timeless pieces that makes you feel confident, beautiful, and glamorous.
             </p><br>
 
-            <abbr title="">Create stunning images with as much or as little control as you like thanks to a choice of Basic and creative modes.</abbr>
+            <abbr title="">Our Boutique offers a wide selection of clothing, accessories, and beauty products that cater to all your fashion needs</abbr>
 
             <br><br>
 
-            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Create stunning images with as much or as little control as you like thanks to a choice of Basic and creative modes</marquee>
+            <marquee bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Thank you for choosing Glam Boutique.We can't wait to help you find your next favorite piece</marquee>
         </div>
     </section>
    

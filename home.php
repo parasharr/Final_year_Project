@@ -231,7 +231,7 @@ require 'config.php';
     
 
     <div class="font">
-        <h4>Featured Sections</h4>
+        <h4>Featured Wears</h4>
     </div>
 
     <section id="product1" class="section-p1">
@@ -242,37 +242,37 @@ require 'config.php';
                     <div class="gallery-container">
                         <div class="image-card">
                             <div class="zoom-effect">
-                                <a href="shop.html"><img class="shoe" src="Kurta.jpeg" alt="" width="500" height="300"></a>
+                                <img class="shoe" src="Kurta.jpeg" alt="" width="500" height="300">
                             </div> 
                             <h3>Kurta's for men</h3>
                         </div>
                         <div class="image-card">
                             <div class="zoom-effect">
-                                <a href="shop.html"><img class="shoe" src="Longkurti.jpeg" alt="" width="600" height="400"></a>
+                                <img class="shoe" src="Longkurti.jpeg" alt="" width="600" height="400">
                             </div>
                             <h3>Kurti's for women</h3>
                         </div>
                         <div class="image-card">
                             <div class="zoom-effect">
-                                <a href="shop.html"><img class="shoe" src="Sherwani.jpeg" alt=""></a>
+                                <img class="shoe" src="Sherwani.jpeg" alt="">
                             </div>
                             <h3>Sherwani</h3>
                         </div>
                         <div class="image-card">
                             <div class="zoom-effect">
-                                <a href="shop.html"><img class="shoe" src="Plazo.jpeg" alt=""></a>
+                                <img class="shoe" src="Plazo.jpeg" alt="">
                             </div>
                             <h3>Palazo</h3>
                         </div>
                         <div class="image-card">
                             <div class="zoom-effect">
-                                <a href="shop.html"><img class="shoe" src="Lehenga.jpeg" alt=""></a>
+                                <img class="shoe" src="Lehenga.jpeg" alt="">
                             </div>
                             <h3>Lehenga</h3>
                         </div>
                         <div class="image-card">
                             <div class="zoom-effect">
-                                <a href="shop.html"><img class="shoe" src="Img/Brands/dc/dc-1.jpg" alt=""></a>
+                                <img class="shoe" src="Img/Brands/dc/dc-1.jpg" alt="">
                             </div>
                             <h3>DC</h3>
                         </div>
