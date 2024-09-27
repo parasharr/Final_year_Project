@@ -70,10 +70,10 @@ require 'config.php';
         <h2>Featured Product</h2>
         <p>Festive Collection New & Modern Design</p>
         <div class="pro-container">
-            <div class="product" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.php'">
                 <img src="y-dress-32.jpeg" alt="">
                 <div class="description">
-                    <span>R&R</span>
+                    <span>Glam boutique</span>
                     <h5>Chikankari Long Kurta</h5>
                     <div class="star">
                         <i class='bx bxs-star' style='color:#b3b318' ></i>
@@ -83,14 +83,12 @@ require 'config.php';
                     </div>
                     <h4>₹5,999</h4>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                </div>
+                
             </div>
-            <div class="product" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.php'">
                 <img src="y-dress-30.jpeg" alt="">
                 <div class="description">
-                    <span>Wedress</span>
+                    <span>Glam boutique</span>
                     <h5>Cream Kurta Jacket Set</h5>
                     <div class="star">
                         <i class='bx bxs-star' style='color:#b3b318' ></i>
@@ -100,14 +98,12 @@ require 'config.php';
                     </div>
                     <h4>₹6,599</h4>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                </div>
+               
             </div>
-            <div class="product" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.php'">
                 <img src="y-dress-31.jpeg" alt="">
                 <div class="description">
-                    <span>Bonsoir</span>
+                    <span>Glam boutique</span>
                     <h5>Off-white Embroidered Indo-western</h5>
                     <div class="star">
                         <i class='bx bxs-star' style='color:#b3b318' ></i>
@@ -117,14 +113,12 @@ require 'config.php';
                     </div>
                     <h4>₹5,599</h4>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                </div>
+                
             </div>
-            <div class="product" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.php'">
                 <img src="y-dress-29.jpeg" alt="">
                 <div class="description">
-                    <span>Riyaasat</span>
+                    <span>Glam boutique</span>
                     <h5>Pale Lilac Lucknowi Resham Kurta Set</h5>
                     <div class="star">
                         <i class='bx bxs-star' style='color:#b3b318' ></i>
@@ -134,14 +128,12 @@ require 'config.php';
                     </div>
                     <h4>₹4,999</h4>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                </div>
+                
             </div>
-            <div class="product" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.php'">
                 <img src="y-dress-14.jpeg" alt="">
                 <div class="description">
-                    <span>VJV</span>
+                    <span>Glam boutique</span>
                     <h5>Banarasi Styled Lehenga</h5>
                     <div class="star">
                         <i class='bx bxs-star' style='color:#b3b318' ></i>
@@ -151,14 +143,12 @@ require 'config.php';
                     </div>
                     <h4>₹7,999</h4>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                </div>
+                
             </div>
-            <div class="product" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.php'">
                 <img src="y-dress-13.jpeg" alt="">
                 <div class="description">
-                    <span>Sutikapda</span>
+                    <span>Glam boutique</span>
                     <h5>Pink Banarasi Lehenga</h5>
                     <div class="star">
                         <i class='bx bxs-star' style='color:#b3b318' ></i>
@@ -168,14 +158,12 @@ require 'config.php';
                     </div>
                     <h4>₹5,699</h4>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                </div>
+                
             </div>
-            <div class="product" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.php'">
                 <img src="y-dress-12.jpeg" alt="">
                 <div class="description">
-                    <span>StalktoBuy</span>
+                    <span>Glam boutique</span>
                     <h5>Alluring Embroidery with Palazo</h5>
                     <div class="star">
                         <i class='bx bxs-star' style='color:#b3b318' ></i>
@@ -185,14 +173,12 @@ require 'config.php';
                     </div>
                     <h4>₹5,999</h4>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                </div>
+                
             </div>
-            <div class="product" onclick="window.location.href='shop.html'">
+            <div class="product" onclick="window.location.href='shop.php'">
                 <img src="y-dress-11.jpeg" alt="">
                 <div class="description">
-                    <span>Koskii</span>
+                    <span>Glam boutique</span>
                     <h5>Chanya Choli</h5>
                     <div class="star">
                         <i class='bx bxs-star' style='color:#b3b318' ></i>
@@ -202,9 +188,7 @@ require 'config.php';
                     </div>
                     <h4>₹6,799</h4>
                 </div>
-                <div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -314,8 +298,8 @@ require 'config.php';
     
     <footer class="section-p1">
         <div class="col">
-            <img class="logo" src="logo.png" alt="logo"><br>
-            <h4 class="af-effect">Contact</h4>
+            <img class="logo" src="logo.png" alt="logo" height="25"><br>
+            <h4>Contact</h4>
             <p><b>Address:</b> 562 Wellington Road, Street 32, San Francisco</p>
             <p><b>Phone:</b>+01 2222 365/(+91)60035 16672</p>
             <p><b>Hours:</b>10:00 - 18:00, Mon - Sat</p>
@@ -332,19 +316,18 @@ require 'config.php';
         </div>
         <div class="col">
             <h4>About</h4>
-            <a href="#">About Us</a>
-            <a href="#">Delivery Information</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Contact Us</a>
+            <a href="about.php">About Us</a>
+            <a href="delivery.php">Delivery Information</a>
+            <a href="privacy.php">Privacy Policy</a>
+            <a href="terms.php">Terms & Conditions</a>
+            <a href="contact.php">Contact Us</a>
         </div>
         <div class="col">
         <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
+        <a href="login.php">Sign In</a>
+        <a href="cart.php">View Cart</a>
+        <a href="orders.php">Track My Order</a>
+        <a href="help.php">Help</a>
         </div>
         <div class="col-install">
             <h4>Install App</h4>
@@ -361,7 +344,6 @@ require 'config.php';
         </div>
         
     </footer>
-
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

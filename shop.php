@@ -109,9 +109,9 @@ if(mysqli_num_rows($select_products)>0){
 </section>
 
         
-    <footer class="section-p1">
+<footer class="section-p1">
         <div class="col">
-            <img class="logo" src="logo.png" alt="logo"><br>
+            <img class="logo" src="logo.png" alt="logo" height="25"><br>
             <h4>Contact</h4>
             <p><b>Address:</b> 562 Wellington Road, Street 32, San Francisco</p>
             <p><b>Phone:</b>+01 2222 365/(+91)60035 16672</p>
@@ -129,19 +129,18 @@ if(mysqli_num_rows($select_products)>0){
         </div>
         <div class="col">
             <h4>About</h4>
-            <a href="#">About Us</a>
-            <a href="#">Delivery Information</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Contact Us</a>
+            <a href="about.php">About Us</a>
+            <a href="delivery.php">Delivery Information</a>
+            <a href="privacy.php">Privacy Policy</a>
+            <a href="terms.php">Terms & Conditions</a>
+            <a href="contact.php">Contact Us</a>
         </div>
         <div class="col">
         <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
+        <a href="login.php">Sign In</a>
+        <a href="cart.php">View Cart</a>
+        <a href="orders.php">Track My Order</a>
+        <a href="help.php">Help</a>
         </div>
         <div class="col-install">
             <h4>Install App</h4>

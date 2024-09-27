@@ -61,15 +61,20 @@ if(!empty($_SESSION["id"])){
 
    <section id="user-manage">
     <div class="links">
-        <h1><a href="manage.html">Manage Account</a></h1>
+        <a href="manage.html"><h1>Manage Account</h1></a>
     </div>
     <div class="links">
-        <h1><a href="track.html">Track Order</a></h1>
+        <a href="track.html"><h1>Track Order</h1></a>
     </div>
-        
-        <h1></h1>
-    
+    <div class="links">
+        <a href="track.html"><h1>Order History</h1></a>
+    </div>
+    <div class="links">
+        <a href="track.html"><h1>Help Center</h1></a>
+    </div>
    </section>
+
+   
 
     
 

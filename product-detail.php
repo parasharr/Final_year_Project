@@ -90,21 +90,11 @@ $result = $sql_query->get_result();
                 <p><?php echo $description; ?></p>
                 <h2>₹<?php echo $price; ?></h2>
                 <h5>In Stock</h5>
-                <select>
-                    <option>Select size</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                    <option>Small</option>
-                    <option>Large</option>
-                </select>
-                <input type="number" value="1">
                 <h4>Key Features</h4>
                 <span>
                     <p><?php echo $key_ft; ?></p>
                 </span>
                 <br>
-                <button class="normal" id="add-to-cart">Add to Cart</button>
-                <button class="normal" id="buy-now">Buy Now</button>
             </div>
                 <?php
             }
@@ -134,19 +124,18 @@ $result = $sql_query->get_result();
         </div>
         <div class="col">
             <h4>About</h4>
-            <a href="#">About Us</a>
-            <a href="#">Delivery Information</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Contact Us</a>
+            <a href="about.php">About Us</a>
+            <a href="delivery.php">Delivery Information</a>
+            <a href="privacy.php">Privacy Policy</a>
+            <a href="terms.php">Terms & Conditions</a>
+            <a href="contact.php">Contact Us</a>
         </div>
         <div class="col">
         <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
+        <a href="login.php">Sign In</a>
+        <a href="cart.php">View Cart</a>
+        <a href="orders.php">Track My Order</a>
+        <a href="help.php">Help</a>
         </div>
         <div class="col-install">
             <h4>Install App</h4>

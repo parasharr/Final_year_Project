@@ -134,19 +134,18 @@ require 'config.php';
         </div>
         <div class="col">
             <h4>About</h4>
-            <a href="#">About Us</a>
-            <a href="#">Delivery Information</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Contact Us</a>
+            <a href="about.php">About Us</a>
+            <a href="delivery.php">Delivery Information</a>
+            <a href="privacy.php">Privacy Policy</a>
+            <a href="terms.php">Terms & Conditions</a>
+            <a href="contact.php">Contact Us</a>
         </div>
         <div class="col">
         <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
+        <a href="login.php">Sign In</a>
+        <a href="cart.php">View Cart</a>
+        <a href="orders.php">Track My Order</a>
+        <a href="help.php">Help</a>
         </div>
         <div class="col-install">
             <h4>Install App</h4>
@@ -163,7 +162,6 @@ require 'config.php';
         </div>
         
     </footer>
-    </section>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="script.js"></script>

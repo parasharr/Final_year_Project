@@ -1153,26 +1153,29 @@ button:hover {
     font-weight: 700;
 }
 #user-manage{
-    padding-top: 30px;
+    padding-top: 40px;
 }
 #user-manage .links{
     cursor: pointer;
 }
-#user-manage .links a{
+#user-manage .links h1{
     font-size: 20px;
     text-decoration: none;
     font-weight: 500;
+    padding-left: 15px;
     color: black;
     
 }
-#user-manage .links a:hover{
+#user-manage .links h1:hover{
     color: #088178;
 }
 #user-manage .links{
-    border: 2px solid whitesmoke;
+    border: 1px solid rgb(239, 238, 238);
+    padding-top: 10px;
 }
 #user-manage .links:hover{
-    background-color: #f1f1f1;
+    background-color: whitesmoke;
+    
 }
 
 .container{
@@ -1351,4 +1354,25 @@ a{
 }
 .cart-totals a:hover{
     color: white;
+}
+
+.privacy{
+    text-align: center;
+    font-size: 35px;
+    color: #222;
+}
+.date{
+    font-size: 20px;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.normal-heading{
+    font-size: 30px;
+}
+.listing li{
+    padding-top: 10px;
+}
+.info{
+    padding-top: 20px;
 }
