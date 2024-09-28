@@ -22,45 +22,48 @@ require 'config.php';
                 <li><a href="insert-product.php">Add Products</a></li>
                 <li><a class="active" href="view.php">View Products</a></li>
                 <li><a href="shop.php">Preview</a></li>
-                <li><a href="custom_details.php">Orders</a></li>
+                <li><a href="order.php">Orders</a></li>
             </ul>
         </div>
     </section>
 
-    <h3 class="heading">View Products</h3>
+    <h3 class="heading">Customer Details</h3>
     <div class="container">
         <section class="display_product">
             
                     <?php 
-                        $display_product = mysqli_query($conn,"Select * from `products`");
-                        $num=1;
-                        if(mysqli_num_rows($display_product) > 0){
+                        $display_details = mysqli_query($conn,"Select * from `customer`");
+                        $id=1;
+                        if(mysqli_num_rows($display_details) > 0){
                         echo "<table>
                             <thead>
-                                <th>Sl No</th>
-                                <th>Product Image</th>
-                                <th>Product Name</th>
-                                <th>Product Price</th>
-                                <th>Action</th>
+                                <th>Id</th>
+                                <th>Fullname</th>
+                                <th>Email</th>
+                                <th>City</th>
+                                <th>Address</th>
+                                <th>Pincode</th>
+                                <th>MobileNo.</th>
+                                <th>action</th>
                             </thead>
                             <tbody>";
 
-                            while($row = mysqli_fetch_assoc($display_product)){
+                            while($row = mysqli_fetch_assoc($display_details)){
                                 
                     ?>
                     
                     <tr>
-                        <td><strong><?php echo $num; ?></strong></td>
-                        <td><img class="pro-img" src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>"></td>
-                        <td><?php echo $row['name']; ?></td>
-                        <td><strong>₹<?php echo $row['price']; ?></strong></td>
-                        <td>
-                            <a href="delete.php?delete=<?php echo $row['id']; ?>" class="delete_product_btn" onclick="return confirm('Are you sure to delete this product');"><i class="fas fa-trash"></i></a>
-                            <a href="update.php?edit=<?php echo $row['id']; ?>" class="update_product_btn"><i class="fas fa-edit"></i></a>
-                        </td>
+                        <td><strong><?php echo $id; ?></strong></td>
+                        <td><?php echo $row['fullname'] ?></td>
+                        <td><?php echo $row['email']; ?></td>
+                        <td><?php echo $row['city']; ?></td>
+                        <td><?php echo $row['address']; ?></td>
+                        <td><strong><?php echo $row['pincode']; ?></strong></td>
+                        <td><strong><?php echo $row['mobileno']; ?></strong></td>
+                        <td style="text-align:center;"><a href="view_order.php"><button class="">View Order</button></a></td>
                     </tr>
                     <?php
-                    $num++;
+                    $id++;
                             }
                         }else{
                             echo "<div class='empty_text'>No Products Available!!</div>";

@@ -40,6 +40,7 @@ if(isset($_POST['add_product'])){
                 <li><a class="active" href="insert-product.php">Add Products</a></li>
                 <li><a href="view.php">View Products</a></li>
                 <li><a href="shop.php">Preview</a></li>
+                <li><a href="custom_details.php">Orders</a></li>
             </ul>
         </div>
     </section>
