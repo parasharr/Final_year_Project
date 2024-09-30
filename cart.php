@@ -9,6 +9,7 @@ if(isset($_POST['update_cart_qty'])){
     header('location: cart.php');
 }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +62,7 @@ if(isset($_POST['update_cart_qty'])){
         <table>
             <?php
 $select_cart_products = mysqli_query($conn,"Select * from `cart`");
+$grand_total = 0;
 if(mysqli_num_rows($select_cart_products) > 0){
     echo "
     <thead>
@@ -82,7 +84,7 @@ while($fetch_cart_products = mysqli_fetch_assoc($select_cart_products)){
                 </a></td>
                 <td><?php echo $fetch_cart_products["name"]?></td>
                 <td><img class="pro-img" src="images/<?php echo $fetch_cart_products["image"]?> " alt=""></td>
-                <td>₹<?php echo $fetch_cart_products["price"] ?></td>
+                <td><strong>₹<?php echo $subtotal=number_format($fetch_cart_products['price']) ?></strong></td>
                 <td>
                     <form method="post" action="">
                         <input type="hidden" name="update_qty_id" value="<?php echo $fetch_cart_products["id"] ?>">
@@ -92,17 +94,15 @@ while($fetch_cart_products = mysqli_fetch_assoc($select_cart_products)){
                         </div>
                     </form>    
                 </td>
-                <td>4999</td>
+                <td><strong>₹<?php echo $subtotal=number_format($fetch_cart_products['price']*$fetch_cart_products['quantity']); ?></strong></td>
             </tbody>
     <?php
+    $grand_total = $grand_total+($fetch_cart_products['price']*$fetch_cart_products['quantity']);
 }
-
 }else{
     echo "No Products";
 }
             ?>
-            
-           
         </table>
     </div>
 
@@ -115,8 +115,8 @@ while($fetch_cart_products = mysqli_fetch_assoc($select_cart_products)){
                     <td>Free</td>
                 </tr>
                 <tr>
-                    <td><strong>Total</strong></td>
-                    <td><Strong><p>₹<span id="total-amount">4999</span></p></Strong></td>
+                    <td><strong>Grand Total</strong></td>
+                    <td><Strong><p>₹<span id="total-amount"><?php echo $subtotal=number_format($grand_total); ?></span></p></Strong></td>
                 </tr>
                 <!-- <tr>
                     <td>Tex Rate%</td>
