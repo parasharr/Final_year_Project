@@ -1310,10 +1310,12 @@ button:hover {
 .pro-img{
     width: 15%;
     margin:0 auto;
+    border-radius: 10px;
 }
 .pro-img-1{
     width: 33%;
     margin: 25px 127px;
+    border-radius: 10px;
 }
 
 .pro-container-1{
@@ -1378,3 +1380,21 @@ a{
 }
 
 
+#pay-card .border{
+    display: flex;
+    border: 1px solid #000;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+
+#pay-card .pro-det{
+    margin: 20px;
+}
+#pay-card .pro-det .one{
+    margin-top: 8px;
+}
+.img-5{
+    width: 20%;
+    margin: 25px;
+    border-radius: 10px;
+}

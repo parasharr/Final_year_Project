@@ -6,15 +6,15 @@ if(isset($_POST['sub_details'])){
     $c_email = $_POST['c_email'];
     $c_address = $_POST['c_address'];
     $c_city = $_POST['c_city'];
-    $c_country = $_POST['c_country'];
-    $c_state = $_POST['c_state'];
     $c_pincode = $_POST['c_pincode'];
     $c_mobileno = $_POST['c_mobileno'];
 
 
-    $insert_query = mysqli_query($conn,"insert into `customer` (fullname,email,address,city,country,state,pincode,mobileno) values('$c_name','$c_email','$c_address','$c_city','$c_country','c_state','$c_pincode','$c_mobileno')") or die("Insert query failed");
+    $insert_query = mysqli_query($conn,"insert into `customer` (fullname,email,address,city,pincode,mobileno) values('$c_name','$c_email','$c_address','$c_city','$c_pincode','$c_mobileno')") or die("Insert query failed");
     if($insert_query){
+        header('location: payment.php');
         echo"<script> alert('Submitted Successfully!'); </script>";
+
     }else{
         $display_message = "Error during inserting";
     }
@@ -83,10 +83,6 @@ if(isset($_POST['sub_details'])){
                         <input type="text" name="c_address" placeholder="Enter Your Address" class="input_fields" required><br>
 
                         <input type="text" name="c_city" placeholder="Enter Your City" class="input_fields" required><br>
-
-                        <input type="text" name="c_country" placeholder="Enter Your City" class="input_fields" required><br>
-
-                        <input type="text" name="c_state" placeholder="Enter Your City" class="input_fields" required><br>
 
                         <input type="text" name="c_pincode" class="input_fields" placeholder="Enter Your Pincode" required><br>
 
