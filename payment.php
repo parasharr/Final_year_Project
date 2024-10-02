@@ -55,13 +55,13 @@ if(mysqli_num_rows($select_cart)>0){
         <div class="img-cls">
                 <img class="img-5" src="images/<?php echo $fetch_product["image"]?>" alt="pro-img">
             </div>
-            <div class="pro-det">
-                <h3 class="one"><?php echo $fetch_product["name"]; ?></h3>
-                <span class="one">Quantity: <?php echo $fetch_product["quantity"]; ?></span>
-                <p class="one">Price: ₹<?php echo $subtotal=number_format($fetch_product['price']*$fetch_product['quantity']); ?></p>
-                <h4 class="one">Order ID: <?php echo $fetch_product["id"] ?></h4>
-                <span class="one">Discount: 40%</span>
-                <h4 class="one">Free shipping</h4>
+                <div class="pro-det">
+                    <h3 class="one"><?php echo $fetch_product["name"]; ?></h3>
+                    <span class="one">Quantity: <?php echo $fetch_product["quantity"]; ?></span>
+                    <p class="one">Price: ₹<?php echo $subtotal=number_format($fetch_product['price']*$fetch_product['quantity']); ?></p>
+                    <h4 class="one">Order ID: <?php echo $fetch_product["id"] ?></h4>
+                    <span class="one">Discount: 40%</span>
+                    <h4 class="one">Free shipping</h4>
                 <p class="one">Seller: Glam Boutique</p>
             </div>
         <?php
