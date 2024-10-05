@@ -1380,21 +1380,39 @@ a{
 }
 
 
-#pay-card .border{
-    display: flex;
-    border: 1px solid #000;
-    flex-wrap: wrap;
-    border-radius: 20px;
+#product1 .order .description .one{
+    text-align: center;
+    font-size: 15px;
 }
 
-#pay-card .pro-det{
-    margin: 20px;
-}
-#pay-card .pro-det .one{
-    margin-top: 8px;
-}
 .img-5{
-    width: 20%;
-    margin: 25px;
+    width: 70% !important;
     border-radius: 10px;
 }
+#custom-details .custom-det{
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.custom-det .address{
+    padding: 20px 20px 20px 25px;
+}
+.custom-det .price{
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+
+#product1 .order{
+    width: 23%;
+    min-width: 300px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+
+            
+
+            
