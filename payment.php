@@ -20,7 +20,7 @@ require "config.php";
 
         <div>
             <ul id="navbar">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="about.php">About</a></li>
@@ -61,7 +61,9 @@ require "config.php";
                         <span>₹<?php echo $fetch_product["price"] ?></span><br>
                         <span>Quantity: <?php echo $fetch_product["quantity"] ?></span><br><br>
                         <span>Seller: Glam Boutique</span>
-                        <input type="hidden" name="products_name" value="<?php echo $fetch_product['name']; ?>"> 
+                        <input type="hidden" name="order_name" value="<?php echo $fetch_product['name']; ?>">  
+                        <input type="hidden" name="order_price" value="<?php echo $fetch_product['price']; ?>">  
+                        <input type="hidden" name="products_quantity" value="<?php echo $fetch_product['quantity']; ?>">  
                     </div>
             </form>
             </div>
@@ -81,7 +83,7 @@ if(mysqli_num_rows($select_customer) > 0){
     while($fetch_details = mysqli_fetch_assoc($select_customer)){
         ?>
         <div class="custom-det">
-            <h3 class="address">Shipping to:<?php echo $fetch_details['fullname'], $fetch_details['address'], $fetch_details['city']?></h3>
+            <h3 class="address">Shipping to: <?php echo $fetch_details['fullname']?>, <?php echo$fetch_details['address']?>, <?php echo $fetch_details['city']?></h3>
             <hr>
             <br>
             <?php
@@ -96,12 +98,12 @@ if(mysqli_num_rows($select_cart)>0){
 }
 ?>  
     <p class="price">Discount: 40%</p>
-    <p class="price">Items Price: ₹<?php echo $subtotal=number_format($all_total); ?></p>
+    <p class="price">Items Price: ₹<?php echo $subtotal=number_format($all_total - 4000); ?></p>
     <p class="price">Delivery: <strong style="color: green;">Free</strong></p>
     <hr>
     <br>
     <div>
-            <h3 class="price">Order Total: ₹<?php echo $subtotal=number_format($all_total); ?></h3>
+            <h3 class="price">Order Total: ₹<?php echo $subtotal=number_format($all_total-4000); ?></h3>
     </div>
         </div>
         <?php
@@ -110,6 +112,14 @@ if(mysqli_num_rows($select_cart)>0){
 ?>
     </section>
     
+    <section class="section-p1">
+        <div class="deli-date">
+            <h3 class="chck">Expected Delivery Date: <span style="font-weight: 600;">10days after shipping.</span></h3>
+            <input type="checkbox"> <span class="chck">Want all Products at the same Date?</span>
+        </div>
+    </section>
+
+    <button id="paypros">Proceed to Pay</button>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

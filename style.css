@@ -1065,8 +1065,8 @@ td input{
     border: 0.5px solid #b7bfb6;
 }
 td button{
-    height: 28px;
-    width: 70px;
+    height: 40px;
+    width: 80px;
     box-shadow: none;
     border: none;
     font-weight: 600;
@@ -1412,7 +1412,37 @@ a{
     position: relative;
 }
 
+.deli-date{
+    border: 1px solid;
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+}
 
+.deli-date .chck{
+    padding-bottom: 10px;
+}
+
+.newbtn{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    border: 1px solid #088178;
+}
+
+#paypros {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    margin-left: 45%;
+    margin-bottom: 5%;
+}
             
 
             

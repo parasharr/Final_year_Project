@@ -8,6 +8,7 @@ if(isset($_POST['sub_details'])){
     $c_city = $_POST['c_city'];
     $c_pincode = $_POST['c_pincode'];
     $c_mobileno = $_POST['c_mobileno'];
+    $orderid = $_POST['orderid'];
 
 
     $insert_query = mysqli_query($conn,"insert into `customer` (fullname,email,address,city,pincode,mobileno) values('$c_name','$c_email','$c_address','$c_city','$c_pincode','$c_mobileno')") or die("Insert query failed");
@@ -39,7 +40,7 @@ if(isset($_POST['sub_details'])){
 
         <div>
             <ul id="navbar">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="about.php">About</a></li>
@@ -87,6 +88,7 @@ if(isset($_POST['sub_details'])){
                         <input type="text" name="c_pincode" class="input_fields" placeholder="Enter Your Pincode" required><br>
 
                         <input type="text" name="c_mobileno" class="input_fields" placeholder="Enter Your PhoneNumber" required><br>
+                        <input type="hidden" value="<?php echo 'OID'.rand(100,1000); ?>" name="orderid">
                     
                 <input type="submit" name="sub_details" class="submit_btn normal" value="Submit">
             </form>

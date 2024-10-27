@@ -16,11 +16,11 @@ require 'config.php';
 </head>
 <body>
     <section id="header">
-        <a href="home.php"><img src="logo.png" alt="logo" height="30px"></a>
+        <a href="index.php"><img src="logo.png" alt="logo" height="30px"></a>
 
         <div>
             <ul id="navbar">
-                <li><a class="active" href="home.php">Home</a></li>
+                <li><a class="active" href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="about.php">About</a></li>

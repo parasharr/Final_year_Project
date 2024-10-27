@@ -20,7 +20,7 @@ require 'config.php';
 
         <div>
             <ul id="navbar">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a class="active" href="about.php">About</a></li>

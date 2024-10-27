@@ -10,6 +10,12 @@ if(isset($_POST['update_cart_qty'])){
 }
 }
 
+if(isset($_GET['remove'])){
+    $remove_id = $_GET['remove'];
+    mysqli_query($conn, "Delete from `cart` where id = $remove_id");
+    header('location: cart.php');
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +35,7 @@ if(isset($_POST['update_cart_qty'])){
 
         <div>
             <ul id="navbar">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="about.php">About</a></li>
@@ -79,7 +85,7 @@ if(mysqli_num_rows($select_cart_products) > 0){
 while($fetch_cart_products = mysqli_fetch_assoc($select_cart_products)){
     ?>
  <tbody id="cart-items">
-                <td><a href="">
+                <td><a href="cart.php?remove=<?php echo $fetch_cart_products['id'] ?>" onclick="return confirm('Are you sure you want to delete this item?')">
                     <i class="fa-solid fa-trash" style="color: #be1313;font-size:20px;"></i>
                 </a></td>
                 <td><?php echo $fetch_cart_products["name"]?></td>
