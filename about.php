@@ -44,13 +44,13 @@ require 'config.php';
     </section>
 
     <section id="pg-header-2" class="abt">
-        <h2>#KnowUs</h2>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <h2 data-aos="fade-up">#KnowUs</h2>
+        <p data-aos="fade-left">All about our Boutique.</p>
     </section>
 
     <section id="about-head" class="section-p1">
-        <img src="a6.jpg" alt="">
-        <div>
+        <img data-aos="fade-up" src="a6.jpg" alt="">
+        <div data-aos="fade-left">
             <h2>Who We Are?</h2>
             <p style="color: #000000;">Welcome to <strong>Glam Boutique</strong>, where fashion meets elegance and style knows no bounds. We are an online store dedicated to bring you the latest trends and timeless pieces that makes you feel confident, beautiful, and glamorous.
             </p><br>
@@ -150,5 +150,9 @@ require 'config.php';
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script
 </body>
 </html>

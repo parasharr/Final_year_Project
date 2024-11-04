@@ -45,41 +45,41 @@ require 'config.php';
     </section>
 
     <section id="pg-header-2" class="abt">
-        <h2>#let's_talk</h2>
-        <p>LEAVE A MESSAGE, We love to hear from you</p>
+        <h2 data-aos="fade-up">#let's_talk</h2>
+        <p data-aos="fade-left">LEAVE A MESSAGE, We love to hear from you</p>
     </section>
 
     <section id="contact-details" class="section-p1">
         <div class="details">
-            <span>GET IN TOUCH</span>
-            <h2>Visit one of our agency location or contact us today</h2>
-            <h3>Head Office</h3>
+            <span data-aos="fade-left">GET IN TOUCH</span>
+            <h2 data-aos="fade-left">Visit one of our agency location or contact us today</h2>
+            <h3 data-aos="fade-left">Head Office</h3>
             <div>
-                <li>
+                <li data-aos="fade-up">
                     <i class="fa-solid fa-map-location-dot"></i>
                     <p>56 Glassford Street Glasgow G1 1UL New York</p>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <i class="fa-solid fa-envelope"></i>
                     <p>contact@example.com</p>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <i class="fa-solid fa-phone"></i>
                     <p>contact@example.com</p>
                 </li>
-                <li>
+                <li data-aos="fade-up">
                     <i class="fa-solid fa-clock"></i>
                     <p>Monday to Saturday: 9.00am to 16.00pm</p>
                 </li>
             </div>
         </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.930354725011!2d-1.2578922859700314!3d51.757646427240395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9ef8c485b%3A0xd2ff1883a001afed!2sUniversity%20of%20Oxford!5e0!3m2!1sen!2sin!4v1718993176096!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map" data-aos="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114600.94915595769!2d91.62775589726562!3d26.155020100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59da1f990b99%3A0x963206a5c9f85554!2sRiwaz%20boutique!5e0!3m2!1sen!2sin!4v1730736507031!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
     <section id="form-details">
-        <form action="">
+        <form action="" data-aos="fade-up">
             <span>LEAVE A MESSAGE</span>
             <h2>We love to hear from you</h2>
             <input type="text" placeholder="your name">
@@ -89,17 +89,17 @@ require 'config.php';
             <button class="normal">Submit</button>
         </form>
         <div class="people">
-            <div>
+            <div data-aos="fade-left">
                 <img src="1.png" alt="">
                 <p><span>Jhon Doe</span> Senior Marketing Manager <br>
                 Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
             </div>
-            <div>
+            <div data-aos="fade-left">
                 <img src="2.png" alt="">
                 <p><span>William Smith</span> Senior Marketing Manager <br>
                 Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
             </div>
-            <div>
+            <div data-aos="fade-left">
                 <img src="3.png" alt="">
                 <p><span>Emma Stone</span> Senior Marketing Manager <br>
                 Phone: + 000 123 000 77 88 <br> Email: contact@example.com</p>
@@ -161,5 +161,9 @@ require 'config.php';
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script
 </body>
 </html>

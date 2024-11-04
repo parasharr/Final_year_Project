@@ -63,9 +63,9 @@ if(isset($_POST['add_to_cart'])){
     </section>
 
     <section id="page-header">
-        <h2>#stayhome</h2>
+        <h2 data-aos="fade-up">#stayhome</h2>
 
-        <p>save more by using coupons & up to 70% off!</p><br>
+        <p data-aos="fade-left">save more by using coupons & up to 70% off!</p><br>
     </section>
 
 
@@ -78,7 +78,7 @@ if(mysqli_num_rows($select_products)>0){
     while($fetch_product = mysqli_fetch_assoc($select_products)){
         ?>
         
-            <div class="product">
+            <div class="product" data-aos="fade-up">
             <form method="post" action="">
                 <img src="images/<?php echo $fetch_product['image']; ?>" alt=""  >
                     <div class="description">
@@ -161,5 +161,9 @@ if(mysqli_num_rows($select_products)>0){
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

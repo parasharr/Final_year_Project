@@ -45,65 +45,65 @@ require 'config.php';
     </section>
 
     <section id="pg-header" class="blog">
-        <h2>#readmore</h2>
-        <p>Read all case studies about our products! </p><br>
+        <h2 data-aos="fade-up">#readmore</h2>
+        <p data-aos="fade-left">Read all case studies about our products! </p><br>
     </section>
 
     <section id="blog">
         <div class="blog-box">
-            <div class="blog-img">
+            <div class="blog-img" data-aos="fade-up">
                 <img src="blog-6.jpg.jpg" alt="">
             </div>
-            <div class="blog-details">
+            <div class="blog-details" data-aos="fade-left">
                 <h4>The Cotton Zip-Up Hoodie</h4>
                 <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <a href="#">CONTINUE READING</a>
             </div>
-            <h1>13/01</h1>
+            <h1 data-aos="fade-right">13/01</h1>
         </div>
         <div class="blog-box">
-            <div class="blog-img">
+            <div class="blog-img" data-aos="fade-up">
                 <img src="blog-7.jpg.jpeg" alt="">
             </div>
-            <div class="blog-details">
+            <div class="blog-details" data-aos="fade-left">
                 <h4>How to Style a Quiff</h4>
                 <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <a href="#">CONTINUE READING</a>
             </div>
-            <h1>13/04</h1>
+            <h1 data-aos="fade-right">13/04</h1>
         </div>
         <div class="blog-box">
-            <div class="blog-img">
+            <div class="blog-img" data-aos="fade-up">
                 <img src="blog-8.jpg.png" alt="">
             </div>
-            <div class="blog-details">
+            <div class="blog-details" data-aos="fade-left">
                 <h4>Must-Have Skater Girl Items</h4>
                 <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <a href="#">CONTINUE READING</a>
             </div>
-            <h1>13/09</h1>
+            <h1 data-aos="fade-right">13/09</h1>
         </div>
         <div class="blog-box">
-            <div class="blog-img">
+            <div class="blog-img" data-aos="fade-up">
                 <img src="blog-9.jpg.jpeg" alt="">
             </div>
-            <div class="blog-details">
+            <div class="blog-details" data-aos="fade-left">
                 <h4>Runway-Inspired Trends</h4>
                 <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <a href="#">CONTINUE READING</a>
             </div>
-            <h1>16/01</h1>
+            <h1 data-aos="fade-right">16/01</h1>
         </div>
         <div class="blog-box">
-            <div class="blog-img">
+            <div class="blog-img" data-aos="fade-up">
                 <img src="blog-10.jpg.jpeg" alt="">
             </div>
-            <div class="blog-details">
+            <div class="blog-details" data-aos="fade-left">
                 <h4>AW20 Menswear Trends</h4>
                 <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <a href="#">CONTINUE READING</a>
             </div>
-            <h1>16/05</h1>
+            <h1 data-aos="fade-right">16/05</h1>
         </div>
     </section>
 
@@ -166,5 +166,9 @@ require 'config.php';
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script
 </body>
 </html>

@@ -43,10 +43,10 @@ require 'config.php';
     </section>
     
     <section id="hero">
-        <h4>Best-offers</h4>
-        <h2>Valuable deals</h2>
-        <h1>On all Fashion Products</h1>
-        <p>save more by using coupons & up to 40% off!</p><br>
+        <h4 data-aos="fade-up">Best-offers</h4>
+        <h2 data-aos="fade-up">Valuable deals</h2>
+        <h1 data-aos="fade-up">On all Fashion Products</h1>
+        <p data-aos="fade-up">save more by using coupons & up to 40% off!</p><br>
         <button>Shop Now</button>
     </section>
 
@@ -56,7 +56,7 @@ require 'config.php';
     </div>
 
     <section id="banner-1" class="section-m1">
-        <div class="banner-txt">
+        <div class="banner-txt" data-aos="fade-up">
             <div class="brighter-text">
                 <h2>Upto <span>40%</span> Off</h2>
                 <h1>On All Products</h1>
@@ -70,7 +70,7 @@ require 'config.php';
         <h2>Featured Product</h2>
         <p>Festive Collection New & Modern Design</p>
         <div class="pro-container">
-            <div class="product" onclick="window.location.href='shop.php'">
+            <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-32.jpeg" alt="">
                 <div class="description">
                     <span>Glam boutique</span>
@@ -83,9 +83,8 @@ require 'config.php';
                     </div>
                     <h4>₹5,999</h4>
                 </div>
-                
             </div>
-            <div class="product" onclick="window.location.href='shop.php'">
+            <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-30.jpeg" alt="">
                 <div class="description">
                     <span>Glam boutique</span>
@@ -100,7 +99,7 @@ require 'config.php';
                 </div>
                
             </div>
-            <div class="product" onclick="window.location.href='shop.php'">
+            <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-31.jpeg" alt="">
                 <div class="description">
                     <span>Glam boutique</span>
@@ -115,7 +114,7 @@ require 'config.php';
                 </div>
                 
             </div>
-            <div class="product" onclick="window.location.href='shop.php'">
+            <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-29.jpeg" alt="">
                 <div class="description">
                     <span>Glam boutique</span>
@@ -130,7 +129,7 @@ require 'config.php';
                 </div>
                 
             </div>
-            <div class="product" onclick="window.location.href='shop.php'">
+            <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-14.jpeg" alt="">
                 <div class="description">
                     <span>Glam boutique</span>
@@ -145,7 +144,7 @@ require 'config.php';
                 </div>
                 
             </div>
-            <div class="product" onclick="window.location.href='shop.php'">
+            <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-13.jpeg" alt="">
                 <div class="description">
                     <span>Glam boutique</span>
@@ -160,7 +159,7 @@ require 'config.php';
                 </div>
                 
             </div>
-            <div class="product" onclick="window.location.href='shop.php'">
+            <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-12.jpeg" alt="">
                 <div class="description">
                     <span>Glam boutique</span>
@@ -175,7 +174,7 @@ require 'config.php';
                 </div>
                 
             </div>
-            <div class="product" onclick="window.location.href='shop.php'">
+            <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-11.jpeg" alt="">
                 <div class="description">
                     <span>Glam boutique</span>
@@ -198,14 +197,14 @@ require 'config.php';
     </div>
     
     
-    <section id="sm-banner" class="section-p1">
+    <section id="sm-banner" class="section-p1" data-aos="fade-right">
         <div class="banner-box">
             <h4>Crazy deals</h4>
             <h2>Buy Matching Sets of Cloths</h2>
             <span>The best classic dress in on sale at Glam Boutique</span>
             <button class="white">Learn More</button>
         </div>
-        <div class="banner-box banner-box2">
+        <div class="banner-box banner-box2" data-aos="fade-right">
             <h4>Festive/Wedding</h4>
             <h2>Upcoming season</h2>
             <span>The best clothing collection at Glam Boutique</span>
@@ -224,37 +223,37 @@ require 'config.php';
                 <button id="prev-slide" class="slide-button material-symbols-rounded">&#10094;</button>
                 <div class="image-list">
                     <div class="gallery-container">
-                        <div class="image-card">
+                        <div class="image-card" data-aos="fade-left">
                             <div class="zoom-effect">
                                 <img class="shoe" src="Kurta.jpeg" alt="" width="500" height="300">
                             </div> 
                             <h3>Kurta's for men</h3>
                         </div>
-                        <div class="image-card">
+                        <div class="image-card" data-aos="fade-left">
                             <div class="zoom-effect">
                                 <img class="shoe" src="Longkurti.jpeg" alt="" width="600" height="400">
                             </div>
                             <h3>Kurti's for women</h3>
                         </div>
-                        <div class="image-card">
+                        <div class="image-card" data-aos="fade-left">
                             <div class="zoom-effect">
                                 <img class="shoe" src="Sherwani.jpeg" alt="">
                             </div>
                             <h3>Sherwani</h3>
                         </div>
-                        <div class="image-card">
+                        <div class="image-card" data-aos="fade-left">
                             <div class="zoom-effect">
                                 <img class="shoe" src="Plazo.jpeg" alt="">
                             </div>
                             <h3>Palazo</h3>
                         </div>
-                        <div class="image-card">
+                        <div class="image-card" data-aos="fade-left">
                             <div class="zoom-effect">
                                 <img class="shoe" src="Lehenga.jpeg" alt="">
                             </div>
                             <h3>Lehenga</h3>
                         </div>
-                        <div class="image-card">
+                        <div class="image-card" data-aos="fade-left">
                             <div class="zoom-effect">
                                 <img class="shoe" src="Img/Brands/dc/dc-1.jpg" alt="">
                             </div>
@@ -348,5 +347,9 @@ require 'config.php';
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
