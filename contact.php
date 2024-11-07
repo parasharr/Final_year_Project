@@ -79,14 +79,14 @@ require 'config.php';
     </section>
 
     <section id="form-details">
-        <form action="" data-aos="fade-up">
-            <span>LEAVE A MESSAGE</span>
-            <h2>We love to hear from you</h2>
-            <input type="text" placeholder="your name">
-            <input type="text" placeholder="email">
-            <input type="text" placeholder="subject">
-            <textarea name="" id="" cols="10" placeholder="your message"></textarea>
-            <button class="normal">Submit</button>
+        <form action="">
+            <span data-aos="fade-right">LEAVE A MESSAGE</span>
+            <h2 data-aos="fade-right">We love to hear from you</h2>
+            <input data-aos="fade-right" type="text" placeholder="your name">
+            <input data-aos="fade-right" type="text" placeholder="email">
+            <input data-aos="fade-right" type="text" placeholder="subject">
+            <textarea data-aos="fade-right" name="" id="" cols="10" placeholder="your message"></textarea>
+            <button class="normal" onclick="alert(`Message has been send!`);">Submit</button>
         </form>
         <div class="people">
             <div data-aos="fade-left">

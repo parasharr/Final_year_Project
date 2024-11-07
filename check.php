@@ -1,6 +1,7 @@
 <?php 
 require 'config.php';
 
+
 if(isset($_POST['sub_details'])){
     $c_name = $_POST['c_name'];
     $c_email = $_POST['c_email'];
@@ -94,7 +95,7 @@ if(isset($_POST['sub_details'])){
             </form>
         </section>
     </div>
-    
+
 <script src="script.js"></script>
 </body>
 </html>

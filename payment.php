@@ -119,7 +119,55 @@ if(mysqli_num_rows($select_cart)>0){
         </div>
     </section>
 
-    <button id="paypros">Proceed to Pay</button>
+
+<section id="payment-methods">
+    <div class="paycard">
+        <div class=left>
+            <p>Payment methods</p>
+            <hr style="border: 1px solid #ccc; margin: 0 15px;">
+            <div class="methods">
+                <div onclick="doFun()" id="tColorA" style="color: green;"><i class="fa-solid fa-credit-card" style="color: green;"></i> Payment by card</div>
+                <div onclick="doFunA()" id="tColorB"><i class="fa-solid fa-building-columns"></i> Internet banks</div>
+                <div onclick="doFunB()" id="tColorC"><i class="fa-solid fa-wallet"></i> Apple/Google pay</div>
+            </div>
+            <hr style="border: 1px solid #ccc; margin:0 15px;">
+        </div>
+        <div class="center">
+            <a href="https://www.shift4shop.com/credit-card-logos.html"><img src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="250 hei
+                auto" alt="Credit card logo" title="Credit card logos"></a>
+            <hr style="border: 1px solid #ccc; margin: 0 15px;">
+            <div class="card-details">
+                <form action="">
+                    <p>Card Number</p>
+                    <div class="c-number" id="c-number">
+                        <input type="text" id="number" class="cc-number" placeholder="Enter card number" maxlength="19" required>
+                        <i class="fa-solid fa-credit-card" style="margin: 0;"></i>
+                    </div>
+                    <div class="c-details">
+                        <div>
+                            <p>Expiry date</p>
+                            <input type="text" id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5" required>
+                        </div>
+                        <div>
+                            <p>CVV</p>
+                            <div class="cvv-box" id="cvv-box">
+                                <input type="text" id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3"required>
+                                <i class="fa-solid fa-circle-question" title="3 digits on the back of the card" style="cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <p>Email</p>
+                        <input type="email" placeholder="example@gmail.com" id="email" required>
+                    </div>
+                    <button id="paypay">PAY NOW</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+   
+<button id="paypros">Proceed to Pay</button>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

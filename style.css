@@ -1390,7 +1390,7 @@ a{
     border-radius: 10px;
 }
 #custom-details .custom-det{
-    border: 1px solid #000;
+    border: 1px solid #aaa;
     border-radius: 10px;
 }
 .custom-det .address{
@@ -1413,7 +1413,7 @@ a{
 }
 
 .deli-date{
-    border: 1px solid;
+    border: 1px solid #aaa;
     padding: 20px 30px 20px 30px;
     border-radius: 10px;
 }
@@ -1443,6 +1443,133 @@ a{
     margin-left: 45%;
     margin-bottom: 5%;
 }
-            
 
-            
+#payment-methods{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paycard{
+    display: flex;
+    width: 70%;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+
+.left{
+    width: 30%;
+    font-weight: bold;
+}
+
+.left p{
+    padding: 30px 20px;
+}
+.methods{
+    padding: 10px 0;
+}
+.methods div{
+    padding: 7px 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.methods div:hover{
+    box-shadow: 0 0 10px rgba(172, 255, 47, 0.196);
+}
+.methods div::after{
+    content: '';
+    display: inline-block;
+    color: green;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 4px 0 4px 4px;
+    border-left-color: var(--fondy-success);
+    margin-left: 10px;
+}
+.fa-solid{
+    margin-right: 10px;
+    font-size: 22px;
+    color: #aaa;
+}
+
+.center{
+    width: 70%;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+.center a{
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-details{
+    padding: 10px 40px 30px;
+}
+.card-details .c-number{
+    width: 50%;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 0 12px;
+    margin-top: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+input{
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+.c-details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.cc-exp{
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    height: 50px;
+    margin-top: 10px;
+    padding: 12px;
+    width: 150%;
+}
+.c-details .cvv-box{
+    border: 1px solid #aaa;
+    margin-top: 10px;
+    padding: 12px;
+    height: 50px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.cc-cvv{
+    width: 60px;
+}
+.email input{
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    padding: 12px;
+    height: 50px;
+    margin-top: 10px;
+}
+.paypay{
+    margin-left: 23%;
+    width: 50%;
+    border: 1px solid;
+    height: 50px;
+    border-radius: 3px;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #222;
+    cursor: pointer;
+}
+
+

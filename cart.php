@@ -60,8 +60,8 @@ if(isset($_GET['remove'])){
     </section>
 
     <section id="pg-header-2" class="abt">
-        <h2>#Cart</h2>
-        <p>Check your cart details here!</p>
+        <h2 data-aos="fade-up">#Cart</h2>
+        <p data-aos="fade-left">Check your cart details here!</p>
     </section>
 
     <div class="cart">
@@ -190,5 +190,9 @@ while($fetch_cart_products = mysqli_fetch_assoc($select_cart_products)){
     <script>
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script
 </body>
 </html>
