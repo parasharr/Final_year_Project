@@ -160,16 +160,25 @@ if(mysqli_num_rows($select_cart)>0){
                         <p>Email</p>
                         <input type="email" placeholder="example@gmail.com" id="email" required>
                     </div>
-                    <button id="paypay">PAY NOW</button>
+                    <button id="paypay" style="margin-left: 23%; width: 50%; border: 1px solid; height: 50px; border-radius: 3px; margin-top: 30px; font-size: 18px; color: #222; cursor: pointer;" onclick="    
+                    if(confirm('Are you sure you want to pay?')){
+                        setTimeout(function(){
+                            alert('Processing payment....');
+                        }, 1000);
+
+                        setTimeout(function(){
+                            alert('Payment Done Successfully! Happy Shopping')
+                        }, 2000);
+                    }">Pay Now</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
    
-<button id="paypros">Proceed to Pay</button>
+<button id="paypros">Place Order</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>

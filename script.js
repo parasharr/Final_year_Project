@@ -6,6 +6,7 @@ iconB = document.querySelector('.fa-building-columns'),
 iconC = document.querySelector('fa-wallet'),
 cDetails = document.querySelector('.card-details');
 
+
 function doFun(){
     tColorA.style.color = "green";
     tColorB.style.color = "#444";
