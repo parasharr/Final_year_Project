@@ -1442,10 +1442,11 @@ a{
     border: 1px solid;
     margin-left: 45%;
     margin-bottom: 5%;
+    border-radius: 5px;
 }
 
 #payment-methods{
-    height: 100vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1561,5 +1562,33 @@ input{
     margin-top: 10px;
 }
 
+.cod{
+    border: 1px solid #222; 
+    width: 35%;
+    margin-left: 30%;
+    margin-bottom: 10%;
+    border-radius: 10px;
+}
 
+.cod>.cash{
+    padding: 20px 30px 20px 30px;
+    font-weight: 600;
+}
 
+#paypay{
+    margin-left: 23%; 
+    width: 50%; 
+    border: 1px solid; 
+    height: 50px; 
+    border-radius: 10px; 
+    margin-top: 30px; 
+    font-size: 18px; 
+    color: #222; 
+    cursor: pointer;
+}
+#paypay:disabled{
+    background-color: #ccc;
+    color: #666;
+    border: 1px solid #999;
+    cursor: not-allowed;
+}

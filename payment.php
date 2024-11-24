@@ -63,7 +63,7 @@ require "config.php";
                         <span>Seller: Glam Boutique</span>
                         <input type="hidden" name="order_name" value="<?php echo $fetch_product['name']; ?>">  
                         <input type="hidden" name="order_price" value="<?php echo $fetch_product['price']; ?>">  
-                        <input type="hidden" name="products_quantity" value="<?php echo $fetch_product['quantity']; ?>">  
+                        <input type="hidden" name="products_quantity" value="<?php echo $fetch_product['quantity']; ?>"> 
                     </div>
             </form>
             </div>
@@ -130,6 +130,7 @@ if(mysqli_num_rows($select_cart)>0){
                 <div onclick="doFunA()" id="tColorB"><i class="fa-solid fa-building-columns"></i> Internet banks</div>
                 <div onclick="doFunB()" id="tColorC"><i class="fa-solid fa-wallet"></i> Apple/Google pay</div>
             </div>
+
             <hr style="border: 1px solid #ccc; margin:0 15px;">
         </div>
         <div class="center">
@@ -160,7 +161,8 @@ if(mysqli_num_rows($select_cart)>0){
                         <p>Email</p>
                         <input type="email" placeholder="example@gmail.com" id="email" required>
                     </div>
-                    <button id="paypay" style="margin-left: 23%; width: 50%; border: 1px solid; height: 50px; border-radius: 3px; margin-top: 30px; font-size: 18px; color: #222; cursor: pointer;" onclick="    
+
+                    <button id="paypay" onclick="    
                     if(confirm('Are you sure you want to pay?')){
                         setTimeout(function(){
                             alert('Processing payment....');
@@ -168,17 +170,45 @@ if(mysqli_num_rows($select_cart)>0){
 
                         setTimeout(function(){
                             alert('Payment Done Successfully! Happy Shopping')
+                            changeButtonText()
                         }, 2000);
-                    }">Pay Now</button>
+                    }
+                    ">Pay Now</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
    
-<button id="paypros">Place Order</button>
+<section class="cod">
+    <div class="cash">
+        <input type="checkbox"><span>Cash On Delivery</span>
+    </div>
+</section>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<input type="submit" name="add_to_cart" id="paypros" value="Place Order">
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+<script>
+    function changeButtonText(){
+        var button = document.getElementById("paypay");
+        button.innerText = "Paid";
+        button.disabled = true;
+
+        localStorage.setItem("buttonDisabled","true");
+    }
+
+    function checkButtonState(){
+        var button = document.getElementById("paypay");
+        var buttonDisabled = localStorage.getItem("buttonDisabled");
+
+        if(buttonDisabled === "true"){
+            button.innerText = "Paid";
+            button.disabled = true;
+        }
+    }
+    window.onload = checkButtonState;
+</script>
 </body>
 </html>
