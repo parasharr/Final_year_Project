@@ -1444,6 +1444,10 @@ a{
     margin-bottom: 5%;
     border-radius: 5px;
 }
+#paypros:hover{
+    background-color: #088178;
+    color: #fff;
+}
 
 #payment-methods{
     height: 75vh;

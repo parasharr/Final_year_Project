@@ -1,7 +1,22 @@
 <?php
 require "config.php";
 
+if(isset($_POST['place_order'])){
+    $or_name = $_POST['or_name']; 
+    $or_quantity = $_POST['or_quantity']; 
+    $or_image = $_POST['or_image']; 
+
+    // Insert data into orders table
+    $insert_query = mysqli_query($conn, "INSERT INTO `orders` (name, quantity, image) VALUES ('$or_name', '$or_quantity', '$or_image')") or die("Insert query failed: " . mysqli_error($conn));
+    if($insert_query){
+        echo "Product inserted successfully";
+    }else{
+        echo "Error during inserting";
+    }
+}
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,9 +76,9 @@ require "config.php";
                         <span>₹<?php echo $fetch_product["price"] ?></span><br>
                         <span>Quantity: <?php echo $fetch_product["quantity"] ?></span><br><br>
                         <span>Seller: Glam Boutique</span>
-                        <input type="hidden" name="order_name" value="<?php echo $fetch_product['name']; ?>">  
-                        <input type="hidden" name="order_price" value="<?php echo $fetch_product['price']; ?>">  
-                        <input type="hidden" name="products_quantity" value="<?php echo $fetch_product['quantity']; ?>"> 
+                        <input type="hidden" name="or_name" value="<?php echo $fetch_product['name']; ?>">    
+                        <input type="hidden" name="or_quantity" value="<?php echo $fetch_product['quantity']; ?>">
+                        <input type="hidden" name="or_image" value="<?php echo $fetch_product['image']; ?>"> 
                     </div>
             </form>
             </div>
@@ -86,6 +101,7 @@ if(mysqli_num_rows($select_customer) > 0){
             <h3 class="address">Shipping to: <?php echo $fetch_details['fullname']?>, <?php echo$fetch_details['address']?>, <?php echo $fetch_details['city']?></h3>
             <hr>
             <br>
+
             <?php
 $select_cart = mysqli_query($conn, "Select * from `cart`");
 $all_total = 0;
@@ -105,6 +121,7 @@ if(mysqli_num_rows($select_cart)>0){
     <div>
             <h3 class="price">Order Total: ₹<?php echo $subtotal=number_format($all_total-4000); ?></h3>
     </div>
+    <input type="hidden" name="order_price" value="<?php echo $fetch_product['price']; ?>">
         </div>
         <?php
     }
@@ -115,7 +132,6 @@ if(mysqli_num_rows($select_cart)>0){
     <section class="section-p1">
         <div class="deli-date">
             <h3 class="chck">Expected Delivery Date: <span style="font-weight: 600;">10days after shipping.</span></h3>
-            <input type="checkbox"> <span class="chck">Want all Products at the same Date?</span>
         </div>
     </section>
 
@@ -186,7 +202,7 @@ if(mysqli_num_rows($select_cart)>0){
     </div>
 </section>
 
-<input type="submit" name="add_to_cart" id="paypros" value="Place Order">
+<input type="submit" name="place_order" id="paypros" value="Place Order">
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>

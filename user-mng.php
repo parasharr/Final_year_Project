@@ -67,10 +67,10 @@ if(!empty($_SESSION["id"])){
         <a href="track.html"><h1>Track Order</h1></a>
     </div>
     <div class="links">
-        <a href="track.html"><h1>Order History</h1></a>
+        <a href="history.html"><h1>Order History</h1></a>
     </div>
     <div class="links">
-        <a href="track.html"><h1>Help Center</h1></a>
+        <a href="help.html"><h1>Help Center</h1></a>
     </div>
    </section>
 
