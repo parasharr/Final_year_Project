@@ -2,105 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ecommerce Website</title>
+    <title>The Ethnic Diva - An Ecommerce Clothing Website</title>
     <link rel="stylesheet" href="https://fontawesome.com/releases/v6.04.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .order-status {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        .status-bar {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
-        .status-step {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            background-color: #f4f4f4;
-            margin: 0 5px;
-            border-radius: 4px;
-        }
-        .status-step.active {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        #cancellationSection h3,p{
-            margin-bottom: 10px;            
-        }
-
-        .status-step.cancelled {
-            background-color: #FF6347;
-            color: white;
-        }
-        #trackingDetails, #cancellationSection {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        .cancel-reasons {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-        }
-        .cancel-reasons label {
-            display: flex;
-            align-items: center;
-        }
-        .cancel-reasons input {
-            margin-right: 10px;
-        }
-        #cancelBtn {
-            background-color: #FF6347;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-        #cancelBtn:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-        }
-        #cancellationFeedback {
-            margin-top: 15px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .success {
-            background-color: #dff0d8;
-            color: #3c763d;
-        }
-        .error {
-            background-color: #f2dede;
-            color: #a94442;
-        }
-        #homePage {
-            display: none;
-            text-align: center;
-            padding: 20px;
-        }
-        #homePageContent {
-            background-color: #f4f4f4;
-            padding: 30px;
-            border-radius: 10px;
-        }
-    </style>
 </head>
 <body>
     <section id="header">
-        <a href="index.php"><img src="logo.png" alt="logo" height="30px"></a>
-
+        <a href="index.php"><img src="logo.png" alt="logo" height="50px"></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.php">Home</a></li>
@@ -119,8 +30,7 @@
         </div>
     </section>
 
-    <div class="order-tracking-container">
-        
+    <div class="order-tracking-container">   
         <div class="order-status">
             <div class="status-bar">
                 <div class="status-step" id="orderPlaced">Order Placed</div>

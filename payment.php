@@ -22,7 +22,7 @@ if(isset($_POST['place_order'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce website</title>
+    <title>The Ethnic Diva - An Ecommerce Clothing Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fontawesome.com/releases/v6.04.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -31,7 +31,7 @@ if(isset($_POST['place_order'])){
 </head>
 <body>
     <section id="header">
-        <a href="home.php"><img src="logo.png" alt="logo" height="30px"></a>
+        <a href="home.php"><img src="logo.png" alt="logo" height="50px"></a>
 
         <div>
             <ul id="navbar">
@@ -41,12 +41,12 @@ if(isset($_POST['place_order'])){
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
 
-                <?php
-                require 'config.php';
-                    $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
-                    $row_count = mysqli_num_rows($select_product);
-                    
-                ?>
+                    <?php
+                    require 'config.php';
+                        $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
+                        $row_count = mysqli_num_rows($select_product);
+                        
+                    ?>
 
                 <li id="lg-bag"><a class="active" href="cart.php"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
@@ -61,27 +61,27 @@ if(isset($_POST['place_order'])){
 
     <section id="product1" class="section-p1">
         <div class="pro-container-1">
-        <?php
+
+            <?php
                 $select_cart = mysqli_query($conn, "Select * from `cart`");
                 if(mysqli_num_rows($select_cart)>0){
                 while($fetch_product = mysqli_fetch_assoc($select_cart)){
             ?>
 
-        
-            <div class="order">
+        <div class="order">
             <form method="post" action="">
             <img class="img-5" src="images/<?php echo $fetch_product["image"]?>" alt="pro-img">
-                    <div class="description">
-                        <h3 class="one"><?php echo $fetch_product["name"]; ?></h3>
-                        <span>₹<?php echo $fetch_product["price"] ?></span><br>
-                        <span>Quantity: <?php echo $fetch_product["quantity"] ?></span><br><br>
-                        <span>Seller: Glam Boutique</span>
-                        <input type="hidden" name="or_name" value="<?php echo $fetch_product['name']; ?>">    
-                        <input type="hidden" name="or_quantity" value="<?php echo $fetch_product['quantity']; ?>">
-                        <input type="hidden" name="or_image" value="<?php echo $fetch_product['image']; ?>"> 
-                    </div>
+                <div class="description">
+                    <h3 class="one"><?php echo $fetch_product["name"]; ?></h3>
+                    <span>₹<?php echo $fetch_product["price"] ?></span><br>
+                    <span>Quantity: <?php echo $fetch_product["quantity"] ?></span><br><br>
+                    <span>Seller: Glam Boutique</span>
+                    <input type="hidden" name="or_name" value="<?php echo $fetch_product['name']; ?>">    
+                    <input type="hidden" name="or_quantity" value="<?php echo $fetch_product['quantity']; ?>">
+                    <input type="hidden" name="or_image" value="<?php echo $fetch_product['image']; ?>"> 
+                </div>
             </form>
-            </div>
+        </div>
 <?php
     }
 }

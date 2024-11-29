@@ -1,6 +1,7 @@
 <?php 
 require 'config.php';
 
+// Insertimg Products to the table
 if(isset($_POST['add_product'])){
     $p_name = $_POST['p_name'];
     $p_price = $_POST['p_price'];
@@ -10,6 +11,7 @@ if(isset($_POST['add_product'])){
     $p_image_tmp_name = $_FILES['p_image']['tmp_name'];
     $p_image_folder='images/'.$p_image;
 
+// Checking condition  
     $insert_query = mysqli_query($conn,"insert into `products` (name,description,key_ft,price,image) values('$p_name','$p_description','$p_ft','$p_price','$p_image')") or die("Insert query failed");
     if($insert_query){
         move_uploaded_file($p_image_tmp_name,$p_image_folder);
@@ -18,8 +20,9 @@ if(isset($_POST['add_product'])){
         $display_message = "Error during inserting";
     }
 }
-
 ?>
+
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

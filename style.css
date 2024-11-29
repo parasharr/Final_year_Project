@@ -1596,3 +1596,90 @@ input{
     border: 1px solid #999;
     cursor: not-allowed;
 }
+
+.order-status {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.status-step {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+.status-step.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancellationSection h3,p{
+    margin-bottom: 10px;            
+}
+
+.status-step.cancelled {
+    background-color: #FF6347;
+    color: white;
+}
+#trackingDetails, #cancellationSection {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.cancel-reasons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.cancel-reasons label {
+    display: flex;
+    align-items: center;
+}
+.cancel-reasons input {
+    margin-right: 10px;
+}
+#cancelBtn {
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+#cancelBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+#cancellationFeedback {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+.error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+#homePage {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+#homePageContent {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+}

@@ -1,13 +1,15 @@
+<!-- PHP code -->
 <?php
 require 'config.php';
-
 ?>
+
+<!-- HTML start -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce website</title>
+    <title>The Ethnic Diva - An Ecommerce Clothing Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fontawesome.com/releases/v6.04.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,8 +17,10 @@ require 'config.php';
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
+<!-- NAVBAR -->
     <section id="header">
-        <a href="index.php"><img src="logo.png" alt="logo" height="30px"></a>
+        <a href="index.php"><img src="logo.png" alt="logo" height="50px"></a>
 
         <div>
             <ul id="navbar">
@@ -25,12 +29,12 @@ require 'config.php';
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
-                <?php
-                require 'config.php';
-                    $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
-                    $row_count = mysqli_num_rows($select_product);
-                    
-                ?>
+                    <?php
+                    require 'config.php';
+                        $select_product = mysqli_query($conn,"Select * from `cart`") or die('query failed');
+                        $row_count = mysqli_num_rows($select_product);
+                        
+                    ?>
                 <li id="lg-bag"><a href="cart.php"><i class='bx bx-shopping-bag bag' style='color:#000000; font-size: 20px;' ></i><span><sup><?php echo $row_count; ?></sup></span></a></li>
                 <li class="user"><a href="register.php"><i class="fa-solid fa-circle-user"></i></a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark" style="color: #000000; font-size: 25px;"></i></a>
@@ -41,7 +45,7 @@ require 'config.php';
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
-    
+<!-- Hero head -->
     <section id="hero">
         <h4 data-aos="fade-up">Best-offers</h4>
         <h2 data-aos="fade-up">Valuable deals</h2>
@@ -54,7 +58,7 @@ require 'config.php';
         <h1>Best Ethnic Wears</h1>
         <h2>For all Festive seasons</h2>
     </div>
-
+<!-- Hero banner -->
     <section id="banner-1" class="section-m1">
         <div class="banner-txt" data-aos="fade-up">
             <div class="brighter-text">
@@ -65,7 +69,7 @@ require 'config.php';
             <button class="btn-bnr">Shop Now</button>
         </div>
     </section>
-
+<!-- Products -->
     <section id="product1" class="section-p1">
         <h2>Featured Product</h2>
         <p>Festive Collection New & Modern Design</p>
@@ -84,6 +88,7 @@ require 'config.php';
                     <h4>₹5,999</h4>
                 </div>
             </div>
+
             <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-30.jpeg" alt="">
                 <div class="description">
@@ -97,8 +102,8 @@ require 'config.php';
                     </div>
                     <h4>₹6,599</h4>
                 </div>
-               
             </div>
+
             <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-31.jpeg" alt="">
                 <div class="description">
@@ -112,8 +117,8 @@ require 'config.php';
                     </div>
                     <h4>₹5,599</h4>
                 </div>
-                
             </div>
+
             <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-29.jpeg" alt="">
                 <div class="description">
@@ -127,8 +132,8 @@ require 'config.php';
                     </div>
                     <h4>₹4,999</h4>
                 </div>
-                
             </div>
+
             <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-14.jpeg" alt="">
                 <div class="description">
@@ -142,8 +147,8 @@ require 'config.php';
                     </div>
                     <h4>₹7,999</h4>
                 </div>
-                
             </div>
+
             <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-13.jpeg" alt="">
                 <div class="description">
@@ -157,8 +162,8 @@ require 'config.php';
                     </div>
                     <h4>₹5,699</h4>
                 </div>
-                
             </div>
+
             <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-12.jpeg" alt="">
                 <div class="description">
@@ -172,8 +177,8 @@ require 'config.php';
                     </div>
                     <h4>₹5,999</h4>
                 </div>
-                
             </div>
+
             <div class="product" onclick="window.location.href='shop.php'" data-aos="fade-up">
                 <img src="y-dress-11.jpeg" alt="">
                 <div class="description">
@@ -187,8 +192,8 @@ require 'config.php';
                     </div>
                     <h4>₹6,799</h4>
                 </div>
-                
             </div>
+
         </div>
     </section>
     
@@ -196,7 +201,7 @@ require 'config.php';
         <a href="shop.php">View More</a>
     </div>
     
-    
+<!-- Banner -->
     <section id="sm-banner" class="section-p1" data-aos="fade-right">
         <div class="banner-box">
             <h4>Crazy deals</h4>
@@ -217,6 +222,7 @@ require 'config.php';
         <h4>Featured Wears</h4>
     </div>
 
+<!-- Slider -->
     <section id="product1" class="section-p1">
         <div class="pro-container">
             <div class="slider-wrapper">
@@ -266,7 +272,7 @@ require 'config.php';
         </div>
     </section>
 
-
+<!-- Features -->
     <section id="feature" class="section-p1">
         <div class="fe-box">
             <img src="f1.png">
@@ -294,7 +300,7 @@ require 'config.php';
         </div>
     </section>
 
-    
+<!-- Footer -->
     <footer class="section-p1">
         <div class="col">
             <img class="logo" src="logo.png" alt="logo" height="25"><br>
@@ -341,12 +347,13 @@ require 'config.php';
         <div class="copyright">
             <p>2024, Pranjeet etc - HTML CSS Ecommerce Tamplate</p>
         </div>
-        
     </footer>
-    
+
+<!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+<!-- Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
