@@ -83,15 +83,18 @@ require 'config.php';
 
 <!-- Details -->
     <section id="form-details">
-        <form action="">
+
+        <form action="send.php" method="post">
             <span data-aos="fade-right">LEAVE A MESSAGE</span>
             <h2 data-aos="fade-right">We love to hear from you</h2>
             <input data-aos="fade-right" type="text" placeholder="your name">
-            <input data-aos="fade-right" type="text" placeholder="email">
-            <input data-aos="fade-right" type="text" placeholder="subject">
-            <textarea data-aos="fade-right" name="" id="" cols="10" placeholder="your message"></textarea>
-            <button class="normal" onclick="alert(`Message has been send!`);">Submit</button>
+            <input data-aos="fade-right" type="email" placeholder="email" name="email" value="">
+            <input data-aos="fade-right" type="text" placeholder="subject" name="subject" value="">
+            <textarea data-aos="fade-right" name="message" id="" cols="10" placeholder="your message" value=""></textarea>
+            <button type="submit" name="send" class="normal" onclick="alert(`Message has been send!`);">Submit</button>
         </form>
+
+
         <div class="people">
             <div data-aos="fade-left">
                 <img src="1.png" alt="">

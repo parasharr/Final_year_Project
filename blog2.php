@@ -58,7 +58,7 @@ require 'config.php';
                 <img src="blog-6.jpg.jpg" alt="">
             </div>
             <div class="blog-details" data-aos="fade-left">
-                <h4>The Cotton Zip-Up Hoodie</h4>
+                <h4>The Silk Cloths</h4>
                 <p>Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <a href="#">CONTINUE READING</a>
             </div>
