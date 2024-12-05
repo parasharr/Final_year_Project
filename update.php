@@ -60,9 +60,6 @@ if(isset($_POST['update_product'])){
             $edit_query = mysqli_query($conn,"Select * from `products` where id=$edit_id");
             if(mysqli_num_rows($edit_query)>0){
                 $fetch_data = mysqli_fetch_assoc($edit_query);
-                
-            
-                
     ?>
     <h3 class="heading">Update Product</h3>
     <form action="" method="post" enctype="multipart/form-data" class="update_product product_container_box">

@@ -30,7 +30,7 @@ if(isset($_POST['add_to_cart'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ethnic Diva - An Ecommerce Clothing Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fontawesome.com/releases/v6.04.0/css/all.css">
+    <link rel="stylesheet" href="https://fontawesome.com/releases/v6.m04.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

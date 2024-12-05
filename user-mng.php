@@ -61,7 +61,7 @@ if(!empty($_SESSION["id"])){
 
    <section id="user-manage">
     <div class="links">
-        <a href="manage.html"><h1>Manage Account</h1></a>
+        <a href="manageacc.php"><h1>Manage Account</h1></a>
     </div>
     <div class="links">
         <a href="track.html"><h1>Track Order</h1></a>

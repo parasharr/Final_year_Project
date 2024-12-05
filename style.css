@@ -1438,6 +1438,8 @@ a{
 
 #paypros {
     padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
     cursor: pointer;
     border: 1px solid;
     margin-left: 45%;
@@ -1581,7 +1583,7 @@ input{
 
 #paypay{
     margin-left: 23%; 
-    width: 50%; 
+    width: 25%; 
     border: 1px solid; 
     height: 50px; 
     border-radius: 10px; 

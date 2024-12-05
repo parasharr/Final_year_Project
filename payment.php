@@ -2,16 +2,24 @@
 require "config.php";
 
 if(isset($_POST['place_order'])){
-    $or_name = $_POST['or_name']; 
-    $or_quantity = $_POST['or_quantity']; 
-    $or_image = $_POST['or_image']; 
+    $order_name = $_POST['order_name']; 
+    $order_quantity = $_POST['order_quantity']; 
+    $order_image = $_POST['order_image']; 
 
     // Insert data into orders table
-    $insert_query = mysqli_query($conn, "INSERT INTO `orders` (name, quantity, image) VALUES ('$or_name', '$or_quantity', '$or_image')") or die("Insert query failed: " . mysqli_error($conn));
+    $stmt = $conn->prepare("INSERT INTO `orders` (name, quantity, image) VALUES (?, ?, ?)");
+    $stmt->bind_param("sis", $order_name, $order_quantity, $order_image);
+    $insert_query = $stmt->execute();
     if($insert_query){
-        echo "Product inserted successfully";
+        echo "
+        <script>
+        alert('Product inserted successfully')
+        </script>";
     }else{
-        echo "Error during inserting";
+        echo "
+        <script>
+        alert('Error during inserting')
+        </script>";
     }
 }
 ?>
@@ -69,18 +77,20 @@ if(isset($_POST['place_order'])){
             ?>
 
         <div class="order">
-            <form method="post" action="">
+
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
             <img class="img-5" src="images/<?php echo $fetch_product["image"]?>" alt="pro-img">
                 <div class="description">
                     <h3 class="one"><?php echo $fetch_product["name"]; ?></h3>
                     <span>₹<?php echo $fetch_product["price"] ?></span><br>
                     <span>Quantity: <?php echo $fetch_product["quantity"] ?></span><br><br>
                     <span>Seller: Glam Boutique</span>
-                    <input type="hidden" name="or_name" value="<?php echo $fetch_product['name']; ?>">    
-                    <input type="hidden" name="or_quantity" value="<?php echo $fetch_product['quantity']; ?>">
-                    <input type="hidden" name="or_image" value="<?php echo $fetch_product['image']; ?>"> 
+                    <input type="hidden" name="order_name" value="<?php echo $fetch_product['name']; ?>">    
+                    <input type="hidden" name="order_quantity" value="<?php echo $fetch_product['quantity']; ?>">
+                    <input type="hidden" name="order_image" value="<?php echo $fetch_product['image']; ?>"> 
                 </div>
             </form>
+
         </div>
 <?php
     }
@@ -202,7 +212,8 @@ if(mysqli_num_rows($select_cart)>0){
     </div>
 </section>
 
-<input type="submit" name="place_order" id="paypros" value="Place Order">
+
+<input type="submit" name="place_order" id="paypros" value="Place Order" onclick="">
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
