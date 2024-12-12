@@ -1527,10 +1527,10 @@ a{
     align-items: center;
     justify-content: space-between;
 }
-input{
+.cc-number,.cc-cvv{
     border: none;
-    border-radius: 3px;
     outline: none;
+
 }
 .c-details{
     display: flex;

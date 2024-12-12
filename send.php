@@ -18,8 +18,8 @@ if(isset($_POST["send"])){
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->setFrom('pranjeetgoswami999@gmail.com');
-    $mail->addAddress($_POST["email"]);
+    $mail->setFrom($_POST["email"]);
+    $mail->addAddress('pranjeetgoswami999@gmail.com');
 
     $mail->isHTML(true);
     $mail->Subject = $_POST["subject"];
