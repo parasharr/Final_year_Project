@@ -20,9 +20,9 @@ require 'config.php';
         <div>
             <ul id="navbar">
                 <li><a href="insert-product.php">Add Products</a></li>
-                <li><a class="active" href="view.php">View Products</a></li>
+                <li><a href="view.php">View Products</a></li>
                 <li><a href="shop.php">Preview</a></li>
-                <li><a href="order.php">Orders</a></li>
+                <li><a class="active" href="order.php">Orders</a></li>
             </ul>
         </div>
     </section>
