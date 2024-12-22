@@ -58,7 +58,7 @@ require 'config.php';
         <img data-aos="fade-up" src="a6.jpg" alt="">
         <div data-aos="fade-left">
             <h2>Who We Are?</h2>
-            <p style="color: #000000;">Welcome to <strong>Glam Boutique</strong>, where fashion meets elegance and style knows no bounds. We are an online store dedicated to bring you the latest trends and timeless pieces that makes you feel confident, beautiful, and glamorous.
+            <p style="color: #000000;">Welcome to <strong>The Ethinic Diva</strong>, where fashion meets elegance and style knows no bounds. We are an online store dedicated to bring you the latest trends and timeless pieces that makes you feel confident, beautiful, and glamorous.
             </p><br>
             <abbr title="">Our Boutique offers a wide selection of clothing, accessories, and beauty products that cater to all your fashion needs</abbr>
             <br><br>
