@@ -52,7 +52,7 @@ require 'config.php';
         <h1 class="privacy">Privacy Policy</h1>
         <h1 class="date">Effective Till: 2025</h1>
         <h2 class="normal-heading">Introduction</h2>
-        <p>Welcome to Glam Boutique. We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and share your information when you visit our website.
+        <p>Welcome to The Ethinic Diva. We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and share your information when you visit our website.
         </p>
         <h2 class="normal-heading">Information We Collect</h2>
         <ul class="listing">
