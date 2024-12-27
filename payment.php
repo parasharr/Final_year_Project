@@ -1,26 +1,23 @@
 <?php
 require "config.php";
 
-if(isset($_POST['place_order'])){
-    $order_name = $_POST['order_name']; 
-    $order_quantity = $_POST['order_quantity']; 
-    $order_image = $_POST['order_image']; 
+if(isset($_POST['place_order'])) {
+    // Sanitize inputs
+    $order_name = mysqli_real_escape_string($conn, $_POST['order_name']); 
+    $order_quantity = (int)$_POST['order_quantity']; 
+    $order_image = mysqli_real_escape_string($conn, $_POST['order_image']); 
 
-    // Insert data into orders table
-    $stmt = $conn->prepare("INSERT INTO `orders` (name, quantity, image) VALUES (?, ?, ?)");
+    // Use prepared statement correctly
+    $stmt = $conn->prepare("INSERT INTO `orders` (`name`, `quantity`, `image`) VALUES (?, ?, ?)");
     $stmt->bind_param("sis", $order_name, $order_quantity, $order_image);
-    $insert_query = $stmt->execute();
-    if($insert_query){
-        echo "
-        <script>
-        alert('Product inserted successfully')
-        </script>";
-    }else{
-        echo "
-        <script>
-        alert('Error during inserting')
-        </script>";
+    
+    if($stmt->execute()) {
+        echo "<script>alert('Product inserted successfully');</script>";
+    } else {
+        echo "<script>alert('Error during insertion: " . $stmt->error . "');</script>";
     }
+    
+    $stmt->close();
 }
 ?>
 
@@ -100,7 +97,7 @@ if(isset($_POST['place_order'])){
 </section>    
 
 
-    <section id="custom-details" class="section-p1">
+<section id="custom-details" class="section-p1">
     <?php
 $select_customer = mysqli_query($conn, "Select * from `customer`");
 
@@ -211,7 +208,6 @@ if(mysqli_num_rows($select_cart)>0){
         <input type="checkbox"><span>Cash On Delivery</span>
     </div>
 </section>
-
 
 <input type="submit" name="place_order" id="paypros" value="Place Order" onclick="">
 
