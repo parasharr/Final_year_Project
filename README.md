@@ -53,7 +53,7 @@ THE ETHNIC DIVA aims to provide an online platform for users to browse, search, 
    - Admin panel: Access the admin panel by navigating to http://localhost/the-ethnic-diva/admin.
 
 ## Live Demo
-    Check out the live demo of THE ETHNIC DIVA here
+    Check out Usage for Live Demo
 
 ## Errors and Solutions
   - *Connection Refused Error*
